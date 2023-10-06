@@ -37,11 +37,19 @@ Do note that the compiler automatically creates a compiled file with executable 
 Explain these changes, and why we need to have them on all users we want to have programming:
 
 *(file: .vimrc)*
-> syntax enable
-> filetype plugin indent on
-> set number
-> set statusline=%f\ %y\ %r%h%w\ %l/%L\ %p%%\ %=%m\ %a\ %r
-> set laststatus=2
-> nnoremap <F5> :!gcc % -o /home/opqam/PROJECTS/edoC/Compiled/%< && /home/opqam/PROJECTS/edoC/Compiled/%< <CR>
+syntax enable
+set tabstop=4
+set shiftwidth=4
+set autoindent
+filetype plugin indent on
+set number
+set statusline=%f\ %y\ %r%h%w\ %l/%L\ %p%%\ %=%m\ %a\ %r
+set laststatus=2
+nnoremap <Leader>cc :set colorcolumn=80<cr>
+nnoremap <Leader>ncc :set colorcolumn-=80<cr>
+nnoremap <F5> :!gcc -Wall -Wextra % -o /home/opqam/PROJECTS/edoC/Compiled/%< && /home/opqam/PROJECTS/edoC/Compiled/%< <CR>
+set t_Co=256
+highlight Comment ctermfg=darkgray
+highlight String ctermfg=darkcyan
 
 --snip--
