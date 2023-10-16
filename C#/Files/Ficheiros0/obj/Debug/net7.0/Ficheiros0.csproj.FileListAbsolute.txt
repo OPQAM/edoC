@@ -1,0 +1,15 @@
+E:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\Files\Ficheiros0\bin\Debug\net7.0\Ficheiros0.exe
+E:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\Files\Ficheiros0\bin\Debug\net7.0\Ficheiros0.deps.json
+E:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\Files\Ficheiros0\bin\Debug\net7.0\Ficheiros0.runtimeconfig.json
+E:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\Files\Ficheiros0\bin\Debug\net7.0\Ficheiros0.dll
+E:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\Files\Ficheiros0\bin\Debug\net7.0\Ficheiros0.pdb
+E:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\Files\Ficheiros0\obj\Debug\net7.0\Ficheiros0.csproj.AssemblyReference.cache
+E:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\Files\Ficheiros0\obj\Debug\net7.0\Ficheiros0.GeneratedMSBuildEditorConfig.editorconfig
+E:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\Files\Ficheiros0\obj\Debug\net7.0\Ficheiros0.AssemblyInfoInputs.cache
+E:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\Files\Ficheiros0\obj\Debug\net7.0\Ficheiros0.AssemblyInfo.cs
+E:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\Files\Ficheiros0\obj\Debug\net7.0\Ficheiros0.csproj.CoreCompileInputs.cache
+E:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\Files\Ficheiros0\obj\Debug\net7.0\Ficheiros0.dll
+E:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\Files\Ficheiros0\obj\Debug\net7.0\refint\Ficheiros0.dll
+E:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\Files\Ficheiros0\obj\Debug\net7.0\Ficheiros0.pdb
+E:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\Files\Ficheiros0\obj\Debug\net7.0\Ficheiros0.genruntimeconfig.cache
+E:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\Files\Ficheiros0\obj\Debug\net7.0\ref\Ficheiros0.dll

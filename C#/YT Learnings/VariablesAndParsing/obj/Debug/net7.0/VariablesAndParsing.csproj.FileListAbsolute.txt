@@ -1,0 +1,14 @@
+D:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\YT Learnings\VariablesAndParsing\bin\Debug\net7.0\VariablesAndParsing.exe
+D:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\YT Learnings\VariablesAndParsing\bin\Debug\net7.0\VariablesAndParsing.deps.json
+D:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\YT Learnings\VariablesAndParsing\bin\Debug\net7.0\VariablesAndParsing.runtimeconfig.json
+D:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\YT Learnings\VariablesAndParsing\bin\Debug\net7.0\VariablesAndParsing.dll
+D:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\YT Learnings\VariablesAndParsing\bin\Debug\net7.0\VariablesAndParsing.pdb
+D:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\YT Learnings\VariablesAndParsing\obj\Debug\net7.0\VariablesAndParsing.GeneratedMSBuildEditorConfig.editorconfig
+D:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\YT Learnings\VariablesAndParsing\obj\Debug\net7.0\VariablesAndParsing.AssemblyInfoInputs.cache
+D:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\YT Learnings\VariablesAndParsing\obj\Debug\net7.0\VariablesAndParsing.AssemblyInfo.cs
+D:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\YT Learnings\VariablesAndParsing\obj\Debug\net7.0\VariablesAndParsing.csproj.CoreCompileInputs.cache
+D:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\YT Learnings\VariablesAndParsing\obj\Debug\net7.0\VariablesAndParsing.dll
+D:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\YT Learnings\VariablesAndParsing\obj\Debug\net7.0\refint\VariablesAndParsing.dll
+D:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\YT Learnings\VariablesAndParsing\obj\Debug\net7.0\VariablesAndParsing.pdb
+D:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\YT Learnings\VariablesAndParsing\obj\Debug\net7.0\VariablesAndParsing.genruntimeconfig.cache
+D:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\YT Learnings\VariablesAndParsing\obj\Debug\net7.0\ref\VariablesAndParsing.dll

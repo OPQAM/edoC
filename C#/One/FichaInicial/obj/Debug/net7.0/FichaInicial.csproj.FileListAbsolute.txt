@@ -1,0 +1,15 @@
+F:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\One\FichaInicial\bin\Debug\net7.0\FichaInicial.exe
+F:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\One\FichaInicial\bin\Debug\net7.0\FichaInicial.deps.json
+F:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\One\FichaInicial\bin\Debug\net7.0\FichaInicial.runtimeconfig.json
+F:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\One\FichaInicial\bin\Debug\net7.0\FichaInicial.dll
+F:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\One\FichaInicial\bin\Debug\net7.0\FichaInicial.pdb
+F:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\One\FichaInicial\obj\Debug\net7.0\FichaInicial.csproj.AssemblyReference.cache
+F:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\One\FichaInicial\obj\Debug\net7.0\FichaInicial.GeneratedMSBuildEditorConfig.editorconfig
+F:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\One\FichaInicial\obj\Debug\net7.0\FichaInicial.AssemblyInfoInputs.cache
+F:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\One\FichaInicial\obj\Debug\net7.0\FichaInicial.AssemblyInfo.cs
+F:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\One\FichaInicial\obj\Debug\net7.0\FichaInicial.csproj.CoreCompileInputs.cache
+F:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\One\FichaInicial\obj\Debug\net7.0\FichaInicial.dll
+F:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\One\FichaInicial\obj\Debug\net7.0\refint\FichaInicial.dll
+F:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\One\FichaInicial\obj\Debug\net7.0\FichaInicial.pdb
+F:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\One\FichaInicial\obj\Debug\net7.0\FichaInicial.genruntimeconfig.cache
+F:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\One\FichaInicial\obj\Debug\net7.0\ref\FichaInicial.dll

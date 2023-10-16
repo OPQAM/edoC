@@ -1,0 +1,15 @@
+F:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\One\Variaveis\bin\Debug\net7.0\Variaveis.exe
+F:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\One\Variaveis\bin\Debug\net7.0\Variaveis.deps.json
+F:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\One\Variaveis\bin\Debug\net7.0\Variaveis.runtimeconfig.json
+F:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\One\Variaveis\bin\Debug\net7.0\Variaveis.dll
+F:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\One\Variaveis\bin\Debug\net7.0\Variaveis.pdb
+F:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\One\Variaveis\obj\Debug\net7.0\Variaveis.csproj.AssemblyReference.cache
+F:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\One\Variaveis\obj\Debug\net7.0\Variaveis.GeneratedMSBuildEditorConfig.editorconfig
+F:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\One\Variaveis\obj\Debug\net7.0\Variaveis.AssemblyInfoInputs.cache
+F:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\One\Variaveis\obj\Debug\net7.0\Variaveis.AssemblyInfo.cs
+F:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\One\Variaveis\obj\Debug\net7.0\Variaveis.csproj.CoreCompileInputs.cache
+F:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\One\Variaveis\obj\Debug\net7.0\Variaveis.dll
+F:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\One\Variaveis\obj\Debug\net7.0\refint\Variaveis.dll
+F:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\One\Variaveis\obj\Debug\net7.0\Variaveis.pdb
+F:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\One\Variaveis\obj\Debug\net7.0\Variaveis.genruntimeconfig.cache
+F:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\One\Variaveis\obj\Debug\net7.0\ref\Variaveis.dll

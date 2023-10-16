@@ -1,0 +1,14 @@
+D:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\Classes\ClassesTutorial1\bin\Debug\net7.0\ClassesTutorial1.exe
+D:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\Classes\ClassesTutorial1\bin\Debug\net7.0\ClassesTutorial1.deps.json
+D:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\Classes\ClassesTutorial1\bin\Debug\net7.0\ClassesTutorial1.runtimeconfig.json
+D:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\Classes\ClassesTutorial1\bin\Debug\net7.0\ClassesTutorial1.dll
+D:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\Classes\ClassesTutorial1\bin\Debug\net7.0\ClassesTutorial1.pdb
+D:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\Classes\ClassesTutorial1\obj\Debug\net7.0\ClassesTutorial1.GeneratedMSBuildEditorConfig.editorconfig
+D:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\Classes\ClassesTutorial1\obj\Debug\net7.0\ClassesTutorial1.AssemblyInfoInputs.cache
+D:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\Classes\ClassesTutorial1\obj\Debug\net7.0\ClassesTutorial1.AssemblyInfo.cs
+D:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\Classes\ClassesTutorial1\obj\Debug\net7.0\ClassesTutorial1.csproj.CoreCompileInputs.cache
+D:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\Classes\ClassesTutorial1\obj\Debug\net7.0\ClassesTutorial1.dll
+D:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\Classes\ClassesTutorial1\obj\Debug\net7.0\refint\ClassesTutorial1.dll
+D:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\Classes\ClassesTutorial1\obj\Debug\net7.0\ClassesTutorial1.pdb
+D:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\Classes\ClassesTutorial1\obj\Debug\net7.0\ClassesTutorial1.genruntimeconfig.cache
+D:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\Classes\ClassesTutorial1\obj\Debug\net7.0\ref\ClassesTutorial1.dll

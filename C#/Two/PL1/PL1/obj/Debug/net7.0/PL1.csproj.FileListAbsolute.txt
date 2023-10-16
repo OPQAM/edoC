@@ -1,0 +1,14 @@
+D:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\Two\PL1\PL1\bin\Debug\net7.0\PL1.exe
+D:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\Two\PL1\PL1\bin\Debug\net7.0\PL1.deps.json
+D:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\Two\PL1\PL1\bin\Debug\net7.0\PL1.runtimeconfig.json
+D:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\Two\PL1\PL1\bin\Debug\net7.0\PL1.dll
+D:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\Two\PL1\PL1\bin\Debug\net7.0\PL1.pdb
+D:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\Two\PL1\PL1\obj\Debug\net7.0\PL1.GeneratedMSBuildEditorConfig.editorconfig
+D:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\Two\PL1\PL1\obj\Debug\net7.0\PL1.AssemblyInfoInputs.cache
+D:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\Two\PL1\PL1\obj\Debug\net7.0\PL1.AssemblyInfo.cs
+D:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\Two\PL1\PL1\obj\Debug\net7.0\PL1.csproj.CoreCompileInputs.cache
+D:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\Two\PL1\PL1\obj\Debug\net7.0\PL1.dll
+D:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\Two\PL1\PL1\obj\Debug\net7.0\refint\PL1.dll
+D:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\Two\PL1\PL1\obj\Debug\net7.0\PL1.pdb
+D:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\Two\PL1\PL1\obj\Debug\net7.0\PL1.genruntimeconfig.cache
+D:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\Two\PL1\PL1\obj\Debug\net7.0\ref\PL1.dll

@@ -1,0 +1,8 @@
+E:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\Funcs\Func3\bin\Debug\Func3.exe.config
+E:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\Funcs\Func3\bin\Debug\Func3.exe
+E:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\Funcs\Func3\bin\Debug\Func3.pdb
+E:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\Funcs\Func3\obj\Debug\Func3.csproj.AssemblyReference.cache
+E:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\Funcs\Func3\obj\Debug\Func3.csproj.CoreCompileInputs.cache
+E:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\Funcs\Func3\obj\Debug\Func3.exe
+E:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\Funcs\Func3\obj\Debug\Func3.pdb
+E:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\Funcs\Func3\obj\Debug\Func3.csproj.SuggestedBindingRedirects.cache

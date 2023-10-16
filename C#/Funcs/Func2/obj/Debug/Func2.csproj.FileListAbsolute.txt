@@ -1,0 +1,14 @@
+D:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\Funcs\Func2\bin\Debug\Func2.exe.config
+D:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\Funcs\Func2\bin\Debug\Func2.exe
+D:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\Funcs\Func2\bin\Debug\Func2.pdb
+D:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\Funcs\Func2\obj\Debug\Func2.csproj.AssemblyReference.cache
+D:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\Funcs\Func2\obj\Debug\Func2.csproj.CoreCompileInputs.cache
+D:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\Funcs\Func2\obj\Debug\Func2.exe
+D:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\Funcs\Func2\obj\Debug\Func2.pdb
+E:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\Funcs\Func2\bin\Debug\Func2.exe.config
+E:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\Funcs\Func2\bin\Debug\Func2.exe
+E:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\Funcs\Func2\bin\Debug\Func2.pdb
+E:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\Funcs\Func2\obj\Debug\Func2.csproj.AssemblyReference.cache
+E:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\Funcs\Func2\obj\Debug\Func2.csproj.CoreCompileInputs.cache
+E:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\Funcs\Func2\obj\Debug\Func2.exe
+E:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\Funcs\Func2\obj\Debug\Func2.pdb

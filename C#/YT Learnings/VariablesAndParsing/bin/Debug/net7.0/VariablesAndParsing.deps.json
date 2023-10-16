@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "VariablesAndParsing/1.0.0": {
+        "runtime": {
+          "VariablesAndParsing.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "VariablesAndParsing/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

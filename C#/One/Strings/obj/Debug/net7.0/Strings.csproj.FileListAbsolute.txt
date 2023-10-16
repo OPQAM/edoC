@@ -1,0 +1,15 @@
+F:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\One\Strings\bin\Debug\net7.0\Strings.exe
+F:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\One\Strings\bin\Debug\net7.0\Strings.deps.json
+F:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\One\Strings\bin\Debug\net7.0\Strings.runtimeconfig.json
+F:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\One\Strings\bin\Debug\net7.0\Strings.dll
+F:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\One\Strings\bin\Debug\net7.0\Strings.pdb
+F:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\One\Strings\obj\Debug\net7.0\Strings.csproj.AssemblyReference.cache
+F:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\One\Strings\obj\Debug\net7.0\Strings.GeneratedMSBuildEditorConfig.editorconfig
+F:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\One\Strings\obj\Debug\net7.0\Strings.AssemblyInfoInputs.cache
+F:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\One\Strings\obj\Debug\net7.0\Strings.AssemblyInfo.cs
+F:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\One\Strings\obj\Debug\net7.0\Strings.csproj.CoreCompileInputs.cache
+F:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\One\Strings\obj\Debug\net7.0\Strings.dll
+F:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\One\Strings\obj\Debug\net7.0\refint\Strings.dll
+F:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\One\Strings\obj\Debug\net7.0\Strings.pdb
+F:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\One\Strings\obj\Debug\net7.0\Strings.genruntimeconfig.cache
+F:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\One\Strings\obj\Debug\net7.0\ref\Strings.dll

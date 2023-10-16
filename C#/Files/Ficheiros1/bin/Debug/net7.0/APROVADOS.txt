@@ -1,0 +1,4 @@
+1 Ricardo 9.5 
+2 Ana 10 
+3 Paula 14.6 
+6 Helena 9.6 

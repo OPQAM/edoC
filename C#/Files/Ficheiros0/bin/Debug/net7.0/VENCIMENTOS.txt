@@ -1,0 +1,10 @@
+1 Ricardo 200
+2 Paulo 100
+3 Maria 900
+4 António 940
+5 Ana 500
+6 Helena 3000
+7 Sabrina 1000 
+8 John 500
+9 Renata 4000
+10 Larry 500

@@ -1,0 +1,14 @@
+E:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\Files\Ficheiros1\bin\Debug\net7.0\Ficheiros1.exe
+E:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\Files\Ficheiros1\bin\Debug\net7.0\Ficheiros1.deps.json
+E:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\Files\Ficheiros1\bin\Debug\net7.0\Ficheiros1.runtimeconfig.json
+E:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\Files\Ficheiros1\bin\Debug\net7.0\Ficheiros1.dll
+E:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\Files\Ficheiros1\bin\Debug\net7.0\Ficheiros1.pdb
+E:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\Files\Ficheiros1\obj\Debug\net7.0\Ficheiros1.GeneratedMSBuildEditorConfig.editorconfig
+E:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\Files\Ficheiros1\obj\Debug\net7.0\Ficheiros1.AssemblyInfoInputs.cache
+E:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\Files\Ficheiros1\obj\Debug\net7.0\Ficheiros1.AssemblyInfo.cs
+E:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\Files\Ficheiros1\obj\Debug\net7.0\Ficheiros1.csproj.CoreCompileInputs.cache
+E:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\Files\Ficheiros1\obj\Debug\net7.0\Ficheiros1.dll
+E:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\Files\Ficheiros1\obj\Debug\net7.0\refint\Ficheiros1.dll
+E:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\Files\Ficheiros1\obj\Debug\net7.0\Ficheiros1.pdb
+E:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\Files\Ficheiros1\obj\Debug\net7.0\Ficheiros1.genruntimeconfig.cache
+E:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\Files\Ficheiros1\obj\Debug\net7.0\ref\Ficheiros1.dll

@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34031.279
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VariablesAndParsing", "VariablesAndParsing.csproj", "{36A076F8-2F71-4CCE-A34A-40DD5E8D4D9B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{36A076F8-2F71-4CCE-A34A-40DD5E8D4D9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36A076F8-2F71-4CCE-A34A-40DD5E8D4D9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36A076F8-2F71-4CCE-A34A-40DD5E8D4D9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36A076F8-2F71-4CCE-A34A-40DD5E8D4D9B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {848C5D3D-D15B-4D2C-96FF-693E475F9425}
+	EndGlobalSection
+EndGlobal

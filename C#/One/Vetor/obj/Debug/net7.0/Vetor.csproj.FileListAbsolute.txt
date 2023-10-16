@@ -1,0 +1,15 @@
+F:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\One\Vetor\bin\Debug\net7.0\Vetor.exe
+F:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\One\Vetor\bin\Debug\net7.0\Vetor.deps.json
+F:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\One\Vetor\bin\Debug\net7.0\Vetor.runtimeconfig.json
+F:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\One\Vetor\bin\Debug\net7.0\Vetor.dll
+F:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\One\Vetor\bin\Debug\net7.0\Vetor.pdb
+F:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\One\Vetor\obj\Debug\net7.0\Vetor.csproj.AssemblyReference.cache
+F:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\One\Vetor\obj\Debug\net7.0\Vetor.GeneratedMSBuildEditorConfig.editorconfig
+F:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\One\Vetor\obj\Debug\net7.0\Vetor.AssemblyInfoInputs.cache
+F:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\One\Vetor\obj\Debug\net7.0\Vetor.AssemblyInfo.cs
+F:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\One\Vetor\obj\Debug\net7.0\Vetor.csproj.CoreCompileInputs.cache
+F:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\One\Vetor\obj\Debug\net7.0\Vetor.dll
+F:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\One\Vetor\obj\Debug\net7.0\refint\Vetor.dll
+F:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\One\Vetor\obj\Debug\net7.0\Vetor.pdb
+F:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\One\Vetor\obj\Debug\net7.0\Vetor.genruntimeconfig.cache
+F:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\One\Vetor\obj\Debug\net7.0\ref\Vetor.dll

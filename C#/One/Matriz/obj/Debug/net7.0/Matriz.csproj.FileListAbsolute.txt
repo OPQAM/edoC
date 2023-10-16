@@ -1,0 +1,15 @@
+F:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\One\Matriz\bin\Debug\net7.0\Matriz.exe
+F:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\One\Matriz\bin\Debug\net7.0\Matriz.deps.json
+F:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\One\Matriz\bin\Debug\net7.0\Matriz.runtimeconfig.json
+F:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\One\Matriz\bin\Debug\net7.0\Matriz.dll
+F:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\One\Matriz\bin\Debug\net7.0\Matriz.pdb
+F:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\One\Matriz\obj\Debug\net7.0\Matriz.csproj.AssemblyReference.cache
+F:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\One\Matriz\obj\Debug\net7.0\Matriz.GeneratedMSBuildEditorConfig.editorconfig
+F:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\One\Matriz\obj\Debug\net7.0\Matriz.AssemblyInfoInputs.cache
+F:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\One\Matriz\obj\Debug\net7.0\Matriz.AssemblyInfo.cs
+F:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\One\Matriz\obj\Debug\net7.0\Matriz.csproj.CoreCompileInputs.cache
+F:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\One\Matriz\obj\Debug\net7.0\Matriz.dll
+F:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\One\Matriz\obj\Debug\net7.0\refint\Matriz.dll
+F:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\One\Matriz\obj\Debug\net7.0\Matriz.pdb
+F:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\One\Matriz\obj\Debug\net7.0\Matriz.genruntimeconfig.cache
+F:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\One\Matriz\obj\Debug\net7.0\ref\Matriz.dll

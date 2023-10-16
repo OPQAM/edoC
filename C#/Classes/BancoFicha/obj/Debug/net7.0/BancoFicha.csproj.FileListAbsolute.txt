@@ -1,0 +1,15 @@
+E:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\Classes\BancoFicha\bin\Debug\net7.0\BancoFicha.exe
+E:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\Classes\BancoFicha\bin\Debug\net7.0\BancoFicha.deps.json
+E:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\Classes\BancoFicha\bin\Debug\net7.0\BancoFicha.runtimeconfig.json
+E:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\Classes\BancoFicha\bin\Debug\net7.0\BancoFicha.dll
+E:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\Classes\BancoFicha\bin\Debug\net7.0\BancoFicha.pdb
+E:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\Classes\BancoFicha\obj\Debug\net7.0\BancoFicha.csproj.AssemblyReference.cache
+E:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\Classes\BancoFicha\obj\Debug\net7.0\BancoFicha.GeneratedMSBuildEditorConfig.editorconfig
+E:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\Classes\BancoFicha\obj\Debug\net7.0\BancoFicha.AssemblyInfoInputs.cache
+E:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\Classes\BancoFicha\obj\Debug\net7.0\BancoFicha.AssemblyInfo.cs
+E:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\Classes\BancoFicha\obj\Debug\net7.0\BancoFicha.csproj.CoreCompileInputs.cache
+E:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\Classes\BancoFicha\obj\Debug\net7.0\BancoFicha.dll
+E:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\Classes\BancoFicha\obj\Debug\net7.0\refint\BancoFicha.dll
+E:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\Classes\BancoFicha\obj\Debug\net7.0\BancoFicha.pdb
+E:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\Classes\BancoFicha\obj\Debug\net7.0\BancoFicha.genruntimeconfig.cache
+E:\ATEC\PROGRAMMING\C#\TheBeginningIsAGreatPlaceToStart\Classes\BancoFicha\obj\Debug\net7.0\ref\BancoFicha.dll
