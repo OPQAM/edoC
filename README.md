@@ -6,3 +6,5 @@ Although I am intersted in being able to read and understand these languages, I'
 interested, at the moment, in writing extensive code for them or to deeply study them.
 
 Be warned. This repository will probably be the least organized of them all.
+
+Need to find a common thread other than "let's dump all stuff C in here. get back to C & Assembly rumaging.
