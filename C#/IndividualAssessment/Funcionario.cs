@@ -1,6 +1,7 @@
 ﻿internal class Funcionario
 {
-    private static int nextId = 1001; // Initialize addresses with 1
+    private static int nextId = 980; // Initialize addresses after a certain address
+    private static readonly object lockObject = new object();
 
     public int Id { get; }
     public string Nome { get; set; }
@@ -8,7 +9,10 @@
 
     public Funcionario(string nome, int salario)
     {
-        Id = nextId++;
+        lock (lockObject)
+        {
+            Id = nextId++;
+        }
         Nome = nome;
         Salario = salario;
     }

@@ -20,12 +20,11 @@ namespace GestaoFuncionarios
         {
             return $"ID: {Id}\nNome: {Nome}\nSalario: {Salario}\nDepartamento: {Departamento}\nProjeto: {Projeto}";
         }
-        // Add this property to the Assistente class
         public string AtributosFunc
         {
             get
             {
-                return $"ID: {Id}, Nome: {Nome}, Salario: {Salario}, Departamento: {Departamento}, Projeto: {Projeto}";
+                return ToString();
             }
         }
     }

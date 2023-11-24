@@ -10,7 +10,9 @@ namespace GestaoFuncionarios
         List<Engenheiro> engenheiros = new List<Engenheiro>();
         List<Assistente> assistentes = new List<Assistente>();
 
-        #region Adicionar Funcionário
+        #region Worker Management
+
+        #region Add Worker functions
         public void AddDiretor(string nome, int salario, string departamento)
         {
             Diretor d = new Diretor(nome, salario, departamento);
@@ -30,14 +32,14 @@ namespace GestaoFuncionarios
         }
         #endregion
 
-        #region Remover Funcionário
-        public void RemoverFuncionario(int id)
+        #region Remove Worker functions
+        public void RemoveWorker(int id)
         {
             Diretor diretorToRemove = diretores.FirstOrDefault(d => d.Id == id);
 
             if (diretorToRemove != null)
             {
-                RemoverComEfeito($"Diretor com ID {id} removido com sucesso.");
+                ReturnWithEffect($"Diretor com ID {id} removido com sucesso.");
                 diretores.Remove(diretorToRemove);
                 return;
             }
@@ -46,7 +48,7 @@ namespace GestaoFuncionarios
 
             if (engenheiroToRemove != null)
             {
-                RemoverComEfeito($"Engenheiro com ID {id} removido com sucesso.");
+                ReturnWithEffect($"Engenheiro com ID {id} removido com sucesso.");
                 engenheiros.Remove(engenheiroToRemove);
                 return;
             }
@@ -55,47 +57,42 @@ namespace GestaoFuncionarios
 
             if (assistenteToRemove != null)
             {
-                RemoverComEfeito($"Assitente com ID {id} removido com sucesso.");
+                ReturnWithEffect($"Assitente com ID {id} removido com sucesso.");
                 assistentes.Remove(assistenteToRemove);
                 return;
             }
 
-            RemoverComEfeito($"Nenhum funcionário encontrado com o ID {id}.");
         }
         #endregion
 
-        #region Editar Funcionário
-        public void EditarFuncionarioPorID(int id, string novoNome, int novoSalario, string novoDepartamento = null, string novoGestor = null, string novoProjeto = null)
+        #region Edit Worker functions
+        public void EditWorkerByID(int id, int novoSalario, string novoDepartamento = null, string novoGestor = null, string novoProjeto = null)
         {
             List<Funcionario> funcionarios = GetFuncionarios();
             Funcionario funcionario = funcionarios.FirstOrDefault(f => f.Id == id);
 
             if (funcionario != null)
             {
-                funcionario.Nome = novoNome;
                 funcionario.Salario = novoSalario;
 
                 if (funcionario is Diretor diretor)
                 {
-                    EditarDiretor(diretor, novoDepartamento);
+                    EditDiretor(diretor, novoDepartamento);
                 }
                 else if (funcionario is Engenheiro engenheiro)
                 {
-                    EditarEngenheiro(engenheiro, novoDepartamento, novoGestor, novoProjeto);
+                    EditEngenheiro(engenheiro, novoDepartamento, novoGestor, novoProjeto);
                 }
                 else if (funcionario is Assistente assistente)
                 {
-                    EditarAssistente(assistente, novoDepartamento, novoProjeto);
+                    EditAssistente(assistente, novoDepartamento, novoProjeto);
                 }
-                Console.WriteLine($"Funcionário com o ID {id} editado com sucesso.");
-            }
-            else
-            {
-                Console.WriteLine($"Funcionário com o ID {id} não encontrado.");
+                Console.WriteLine();
+                ReturnWithEffect($"Funcionário com o ID {id} editado com sucesso.");
             }
         }
 
-        private void EditarEngenheiro(Engenheiro engenheiro, string novoDepartamento, string novoGestor, string novoProjeto)
+        private void EditEngenheiro(Engenheiro engenheiro, string novoDepartamento, string novoGestor, string novoProjeto)
         {
             // adições para garantir que o 'enter' faz com que permaneça igual
             if (engenheiro.GetType().GetProperty("Departamento") != null && !string.IsNullOrWhiteSpace(novoDepartamento))
@@ -116,7 +113,7 @@ namespace GestaoFuncionarios
             }
         }
 
-        private void EditarDiretor(Diretor diretor, string novoDepartamento)
+        private void EditDiretor(Diretor diretor, string novoDepartamento)
         {
             if (diretor.GetType().GetProperty("Departamento") != null && !string.IsNullOrWhiteSpace(novoDepartamento))
             {
@@ -124,7 +121,7 @@ namespace GestaoFuncionarios
             }
         }
 
-        private void EditarAssistente(Assistente assistente, string novoDepartamento, string novoProjeto)
+        private void EditAssistente(Assistente assistente, string novoDepartamento, string novoProjeto)
         {
             if (assistente.GetType().GetProperty("Departamento") != null && !string.IsNullOrWhiteSpace(novoDepartamento))
             {
@@ -137,9 +134,11 @@ namespace GestaoFuncionarios
             }
         }
         #endregion
+        #endregion
 
+        #region Find Worker
         // O bool diz se foi encontrado. Permitindo mandar abaixo outras funções se não
-        public (bool found, Funcionario funcionario) ProcurarFuncionarioPorID(int id)
+        public (bool found, Funcionario funcionario) FindWorkerById(int id)
         {
             Diretor encontradoDiretor = diretores.FirstOrDefault(d => d.Id == id);
             Engenheiro encontradoEngenheiro = engenheiros.FirstOrDefault(e => e.Id == id);
@@ -148,37 +147,40 @@ namespace GestaoFuncionarios
             if (encontradoDiretor != null)
             {
                 Console.WriteLine();
-                Console.WriteLine($"Diretor com {encontradoDiretor}");
+                ReturnWithEffect($"Diretor com {encontradoDiretor}");
                 return (true, encontradoDiretor);
             }
             else if (encontradoEngenheiro != null)
             {
                 Console.WriteLine();
-                Console.WriteLine($"Engenheiro com {encontradoEngenheiro}");
+                ReturnWithEffect($"Engenheiro com {encontradoEngenheiro}");
                 return (true, encontradoEngenheiro);
             }
             else if (encontradoAssistente != null)
             {
                 Console.WriteLine();
-                Console.WriteLine($"Assistente com {encontradoAssistente}");
+                ReturnWithEffect($"Assistente com {encontradoAssistente}");
                 return (true, encontradoAssistente);
             }
             else
             {
-                Console.WriteLine($"Não foi encontrado qualquer funcionário com o ID: {id}");
+                Console.WriteLine();
+                ReturnWithEffect($"Não foi encontrado qualquer funcionário com o ID: {id}");
                 return (false, null);
             }
         }
+        #endregion
 
-        public void RelatorioSalarioTotal()
+        #region Wages Functions
+        public void TotalWagesReport()
         {
-            int SalarioTotalDiretor = diretores.Sum(d => d.Salario);
-            int SalarioTotalEngenheiro = engenheiros.Sum(e => e.Salario);
-            int SalarioTotalAssistente = assistentes.Sum(a => a.Salario);
+            int TotalWagesReportDiretor = diretores.Sum(d => d.Salario);
+            int TotalWagesReportEngenheiro = engenheiros.Sum(e => e.Salario);
+            int TotalWagesReportAssistente = assistentes.Sum(a => a.Salario);
 
-            Console.WriteLine($"Salário total para Diretores: {SalarioTotalDiretor}");
-            Console.WriteLine($"Salário total para Engenheiros: {SalarioTotalEngenheiro}");
-            Console.WriteLine($"Salário total para Assistentes: {SalarioTotalAssistente}");
+            Console.WriteLine($"Salário total para Diretores: {TotalWagesReportDiretor}");
+            Console.WriteLine($"Salário total para Engenheiros: {TotalWagesReportEngenheiro}");
+            Console.WriteLine($"Salário total para Assistentes: {TotalWagesReportAssistente}");
         }
 
         public List<Funcionario> FindEmployeesWithHighestSalary(List<Funcionario> funcionarios)
@@ -192,7 +194,9 @@ namespace GestaoFuncionarios
 
             return funcionarios.Where(f => f.Salario == maxSalary).ToList();
         }
+        #endregion
 
+        #region Worker Lists
         public List<Diretor> GetDiretores()
         {
             return diretores;
@@ -208,7 +212,7 @@ namespace GestaoFuncionarios
             return assistentes;
         }
 
-        public void ListarFuncionarios(List<Funcionario> funcionarios)
+        public void ListWorkers(List<Funcionario> funcionarios)
         {
             var sortedFuncionarios = funcionarios.OrderBy(f => f.Id).ToList();
 
@@ -217,18 +221,18 @@ namespace GestaoFuncionarios
                 // Use the 'is' keyword to check the type of the employee
                 if (funcionario is Diretor)
                 {
-                    Console.WriteLine($"║{funcionario.AtributosFunc}, Posição: Diretor║");
+                    Console.WriteLine($"{funcionario.AtributosFunc}, Posição: Diretor");
                 }
                 else if (funcionario is Engenheiro)
                 {
-                    Console.WriteLine($"║{funcionario.AtributosFunc}, Posição: Engenheiro║");
+                    Console.WriteLine($"{funcionario.AtributosFunc}, Posição: Engenheiro");
                 }
                 else if (funcionario is Assistente)
                 {
-                    Console.WriteLine($"║{funcionario.AtributosFunc}, Posição: Assistente║");
+                    Console.WriteLine($"{funcionario.AtributosFunc}, Posição: Assistente");
                 }
 
-                Console.WriteLine("-------------------------------");
+                Console.WriteLine("═════════════════════════════════════════════════════════════════════════════");
             }
         }
 
@@ -240,16 +244,24 @@ namespace GestaoFuncionarios
             funcionarios.AddRange(assistentes);
             return funcionarios;
         }
+        #endregion
 
+        #region Utility
         // Slowing down some of the output
-        private static void RemoverComEfeito(string message)
+        public static void ReturnWithEffect(string message)
         {
             foreach (char c in message)
             {
                 Console.Write(c);
-                System.Threading.Thread.Sleep(15); // Adjust the sleep duration for your preferred speed
+                System.Threading.Thread.Sleep(10); // Adjust the sleep duration for your preferred speed
             }
             Console.WriteLine();
         }
+
+        internal static void ReturnWithEffect(Funcionario funcionario)
+        {
+            throw new NotImplementedException();
+        }
+        #endregion
     }
 }

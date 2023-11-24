@@ -26,7 +26,7 @@ namespace GestaoFuncionarios
         {
             get
             {
-                return $"ID: {Id}, Nome: {Nome}, Salario: {Salario}, Departamento: {Departamento}, Gestor: {Gestor}, Projeto: {Projeto}";
+                return ToString();
             }
         }
     }

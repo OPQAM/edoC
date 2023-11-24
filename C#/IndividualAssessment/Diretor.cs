@@ -22,7 +22,7 @@ namespace GestaoFuncionarios
         {
             get
             {
-                return $"ID: {Id}, Nome: {Nome}, Salario: {Salario}, Departamento: {Departamento}";
+                return ToString();
             }
         }
     }
