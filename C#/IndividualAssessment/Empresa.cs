@@ -16,7 +16,7 @@ namespace GestaoFuncionarios
         public void AddDiretor(string nome, int salario, string departamento)
         {
             Diretor d = new Diretor(nome, salario, departamento);
-            diretores.Add(d);
+            diretores.Add(d); 
         }
 
         public void AddEngenheiro(string nome, int salario, string departamento, string gestor, string projeto)
@@ -34,7 +34,8 @@ namespace GestaoFuncionarios
 
         #region Remove Worker functions
         public void RemoveWorker(int id)
-        {
+                    
+        {           
             Diretor diretorToRemove = diretores.FirstOrDefault(d => d.Id == id);
 
             if (diretorToRemove != null)
@@ -94,19 +95,17 @@ namespace GestaoFuncionarios
 
         private void EditEngenheiro(Engenheiro engenheiro, string novoDepartamento, string novoGestor, string novoProjeto)
         {
-            // adições para garantir que o 'enter' faz com que permaneça igual
             if (engenheiro.GetType().GetProperty("Departamento") != null && !string.IsNullOrWhiteSpace(novoDepartamento))
             {
                 engenheiro.Departamento = novoDepartamento;
             }
 
-            // Check if the property exists and the input is not empty before attempting to edit it
             if (engenheiro.GetType().GetProperty("Projeto") != null && !string.IsNullOrWhiteSpace(novoProjeto))
             {
                 engenheiro.Projeto = novoProjeto;
             }
 
-            // Check if the property exists and the input is not empty before attempting to edit it
+
             if (engenheiro.GetType().GetProperty("Gestor") != null && !string.IsNullOrWhiteSpace(novoGestor))
             {
                 engenheiro.Gestor = novoGestor;
@@ -137,7 +136,6 @@ namespace GestaoFuncionarios
         #endregion
 
         #region Find Worker
-        // O bool diz se foi encontrado. Permitindo mandar abaixo outras funções se não
         public (bool found, Funcionario funcionario) FindWorkerById(int id)
         {
             Diretor encontradoDiretor = diretores.FirstOrDefault(d => d.Id == id);
@@ -218,7 +216,6 @@ namespace GestaoFuncionarios
 
             foreach (var funcionario in sortedFuncionarios)
             {
-                // Use the 'is' keyword to check the type of the employee
                 if (funcionario is Diretor)
                 {
                     Console.WriteLine($"{funcionario.AtributosFunc}, Posição: Diretor");
@@ -253,15 +250,19 @@ namespace GestaoFuncionarios
             foreach (char c in message)
             {
                 Console.Write(c);
-                System.Threading.Thread.Sleep(10); // Adjust the sleep duration for your preferred speed
+                System.Threading.Thread.Sleep(10); // preferred speed
             }
             Console.WriteLine();
         }
 
+        /*
+         * This is in the original code, but is now a useless artifact. Kept for presentation *
+         
         internal static void ReturnWithEffect(Funcionario funcionario)
         {
             throw new NotImplementedException();
         }
+        */
         #endregion
     }
 }
