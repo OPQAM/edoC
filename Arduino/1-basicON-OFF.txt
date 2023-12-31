@@ -1,0 +1,64 @@
+Arduino 101
+
+
+
+
+- Go to webpage and download the IDE (I'm on version 2.2.1)
+
+- Plug in the arduino (Arduino UNO)
+
+- We need to call up a program called BareMinimum (it's what we'll always use when starting
+a new program. Stuff we'll use over and over again)
+
+. File > Examples > 01.Basics > BareMinimum
+
+. This created a void setup() and a void loop()
+
+void setup() -> commands to happen only once
+
+void loop() -> commands to happen again and again.
+
+These two are always present.
+
+- Make sure we're talking to the arduino
+
+. Tools > Port > UNO Port (must be present - verify) - I needed to restart the IDE
+
+- Select the same board as you're using
+
+. Tools > Board > Select UNO
+
+-> Working with Pin 13 (Controling the light (L) in the Arduino proper)
+
+void setup() {
+  // put your setup code here, to run once:
+pinMode(13, OUTPUT);
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+digitalWrite(13,HIGH);
+}
+
+
+- Click 'Upload' (send command to Arduino)
+
+Note: doing
+digitalWrite(13,HIGH);
+digitalWrite(13,LOW);
+
+Makes it blink. But so fast that we cannot see it. We need to slow it down.
+
+We need a delay:
+void setup() {
+  // what we want to use
+pinMode(13, OUTPUT);
+}
+
+void loop() {
+  // the command we're running
+digitalWrite(13,HIGH);
+delay(100); // in miliseconds
+digitalWrite(13,LOW);
+delay(900);
+}

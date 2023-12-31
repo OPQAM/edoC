@@ -1,0 +1,17 @@
+i - current flow
+
+normal lightbulb -> 95% heat, 5% light (inneficient)
+
+The LED is a better system
+
+Semiconductor material
+
+A wire is the simplest conductor
+
+A semiconductor sits between a conductor and an insulator
+
+It can be a very good conductor or insulator, and that can 
+depend on the type of electrical signal sent
+
+Semiconductors:
+
