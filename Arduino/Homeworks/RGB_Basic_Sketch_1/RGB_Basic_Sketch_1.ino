@@ -1,133 +1,13 @@
 void setup() {
   // put your setup code here, to run once:
-  pinMode(2,OUTPUT); //Blue
-  pinMode(6,OUTPUT); //Green
-  pinMode(12,OUTPUT); //Red
+  pinMode(13,OUTPUT); //Blue
+
 }
 
 void loop() {
 // Red up 5 times
-  digitalWrite(12,HIGH);
-  delay(100);
-  digitalWrite(12,LOW);
-  delay(100);
-  digitalWrite(12,HIGH);
-  delay(100);
-  digitalWrite(12,LOW);
-  delay(100);
-  digitalWrite(12,HIGH);
-  delay(100);
-  digitalWrite(12,LOW);
-  delay(100);
-  digitalWrite(12,HIGH);
-  delay(100);
-  digitalWrite(12,LOW);
-  delay(100);
-  digitalWrite(12,HIGH);
-  delay(100);
-  digitalWrite(12,LOW);
-  delay(100);
-// Green up 10 times
-  digitalWrite(6,HIGH);
-  delay(100);
-  digitalWrite(6,LOW);
-  delay(100);
-  digitalWrite(6,HIGH);
-  delay(100);
-  digitalWrite(6,LOW);
-  delay(100);
-  digitalWrite(6,HIGH);
-  delay(100);
-  digitalWrite(6,LOW);
-  delay(100);
-  digitalWrite(6,HIGH);
-  delay(100);
-  digitalWrite(6,LOW);
-  delay(100);
-  digitalWrite(6,HIGH);
-  delay(100);
-  digitalWrite(6,LOW);
-  delay(100);
-  digitalWrite(6,HIGH);
-  delay(100);
-  digitalWrite(6,LOW);
-  delay(100);
-  digitalWrite(6,HIGH);
-  delay(100);
-  digitalWrite(6,LOW);
-  delay(100);
-  digitalWrite(6,HIGH);
-  delay(100);
-  digitalWrite(6,LOW);
-  delay(100);
-  digitalWrite(6,HIGH);
-  delay(100);
-  digitalWrite(6,LOW);
-  delay(100);
-  digitalWrite(6,HIGH);
-  delay(100);
-  digitalWrite(6,LOW);
-  delay(100);
-// Blue up 15 times
-  digitalWrite(2,HIGH);
-  delay(100);
-  digitalWrite(2,LOW);
-  delay(100);
-  digitalWrite(2,HIGH);
-  delay(100);
-  digitalWrite(2,LOW);
-  delay(100);
-  digitalWrite(2,HIGH);
-  delay(100);
-  digitalWrite(2,LOW);
-  delay(100);
-  digitalWrite(2,HIGH);
-  delay(100);
-  digitalWrite(2,LOW);
-  delay(100);
-  digitalWrite(2,HIGH);
-  delay(100);
-  digitalWrite(2,LOW);
-  delay(100);
-  digitalWrite(2,HIGH);
-  delay(100);
-  digitalWrite(2,LOW);
-  delay(100);
-  digitalWrite(2,HIGH);
-  delay(100);
-  digitalWrite(2,LOW);
-  delay(100);
-  digitalWrite(2,HIGH);
-  delay(100);
-  digitalWrite(2,LOW);
-  delay(100);
-  digitalWrite(2,HIGH);
-  delay(100);
-  digitalWrite(2,LOW);
-  delay(100);
-  digitalWrite(2,HIGH);
-  delay(100);
-  digitalWrite(2,LOW);
-  delay(100);
-  digitalWrite(2,HIGH);
-  delay(100);
-  digitalWrite(2,LOW);
-  delay(100);
-  digitalWrite(2,HIGH);
-  delay(100);
-  digitalWrite(2,LOW);
-  delay(100);
-  digitalWrite(2,HIGH);
-  delay(100);
-  digitalWrite(2,LOW);
-  delay(100);
-  digitalWrite(2,HIGH);
-  delay(100);
-  digitalWrite(2,LOW);
-  delay(100);
-  digitalWrite(2,HIGH);
-  delay(100);
-  digitalWrite(2,LOW);
-  delay(100);
-// we need a loop...
+  //digitalWrite(13,HIGH);
+  //delay(200);
+  digitalWrite(13,LOW);
+  delay(200);
 }
