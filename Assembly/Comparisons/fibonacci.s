@@ -16,15 +16,15 @@ main:
 	.cfi_def_cfa_register 6
 	subq	$16, %rsp
 .L3:
-	movl	$0, -4(%rbp)
-	movl	$1, -8(%rbp)
+	movl	$0, -4(%rbp)          # x = 0
+	movl	$1, -8(%rbp)          # y = 1
 .L2:
 	movl	-4(%rbp), %eax
 	movl	%eax, %esi
-	leaq	.LC0(%rip), %rax
-	movq	%rax, %rdi
-	movl	$0, %eax
-	call	printf@PLT
+	leaq	.LC0(%rip), %rax      #
+	movq	%rax, %rdi            # printf  x
+	movl	$0, %eax              #
+	call	printf@PLT            # 
 	movl	-4(%rbp), %edx
 	movl	-8(%rbp), %eax
 	addl	%edx, %eax
