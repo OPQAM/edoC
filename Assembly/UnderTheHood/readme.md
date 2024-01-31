@@ -14,3 +14,10 @@ export PATH=/home/opqam/PROJECTS/edoC/Assembly/UnderTheHood)
 
 // This will get us more information on the compilation process:
 gcc file.c -o file -Wall
+
+Wed 31 Jan 10:38:20 WET 2024
+
+Added a .gitignore to edoC to make sure that the liveoverflow_youtube folder isn't updated to git. Whatever files I need from there will be taken out and placed in UnderTheHood, or wherever else needed
+
+
+Installed gdb - the GNU debugger to look at the assembly code, as per liveoverflow's instructions (check video)
