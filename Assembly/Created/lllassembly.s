@@ -12,7 +12,7 @@ _start:
 # sys_write
 		mov rax, 1               
 		mov rdi, 1				                  # (1).
-		#lea rsi, [hello_world]                   # (2) 
+		lea rsi, [hello_world]                   # (2) 
 		mov rdx, 14                               # (3) 
 		syscall
 
