@@ -5,10 +5,11 @@ int pinC1=10;
 int pinC2=11;
 int buttonRead1;
 int buttonRead2;
-int dt=200;
+int dt=50;
 int lightMaker=0;
 int redLed=3;
-
+int maxval=100;
+int minval=0;
 
 void setup() {
   Serial.begin(9600);
@@ -28,19 +29,16 @@ void loop() {
   if (buttonRead1==0)
   {
     lightMaker++;
-    if (lightMaker>=250){
-      lightMaker = 250;
+    if (lightMaker>=maxval){
+      lightMaker = maxval;
     }
   } else if (buttonRead2==0)
   {
     lightMaker--;
-    if (lightMaker<=0){
-      lightMaker = 0;
+    if (lightMaker<=minval){
+      lightMaker = minval;
     }
   }
-  // The serial prints are just here as a control
-  Serial.print("LIGHTMAKER:");
-  Serial.println(lightMaker);
   analogWrite(redLed,lightMaker);
   delay(dt);
 }
