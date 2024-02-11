@@ -14,8 +14,8 @@ int main()
 // Unsigned long long ints are 64 bits in size. We can also see what that means below
 
 	printf("a-b: %d...\n", a - b); // (1) 
-	printf("u version of a - b: %u\n", a - b); // (2)
-	printf("llu version of a - b: %llu\n", c - d); // (3)
+	printf("unsigned version: %u\n", a - b)
+	printf("lld version of a - b: %lld\n", c - d); // (3)
 	if (a - b > 0) {               // (4)
 		printf("a > b\n");     // (5)
 	} else if (a - b == 0) {
@@ -36,4 +36,5 @@ int main()
 // (4) The a - b > 0 comparison is putting face to face the unsigned version
 //     against 0. So, of course, the unsigned version is much, much higher
 //
-// (5) The print statement isn't realistically outputting the real comparison
+// (5) The print statement isn't realistically outputting the real comparison.
+//     For this to return a true statement, we need to be using signed integers
