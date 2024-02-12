@@ -1,0 +1,123 @@
+Loose thoughts on Bitwise Operators et al.
+This is part of my studies on Systems Programming.
+
+Using a Nibble, the complement, the &, the | and the ^ (exclusive or). Also shifts, << and >>
+
+Values:
+                            NOT                 XOR (^)    
+0000 - 00                  a :~a            a : b : a ^ b
+0001 - 01                  0 : 1            0   0     0
+0010 - 02                  1 : 0            1   0     1
+0011 - 03                                   0   1     1
+0100 - 04                    AND (&)        1   1     0
+0101 - 05                 a : b : a & b 
+0110 - 06                 0   0     0
+0111 - 07                 1   0     0 
+1000 - 08                 0   1     0
+1001 - 09                 1   1     1
+1010 - 10
+1011 - 11                    OR (|)
+1100 - 12                 a : b : a | b
+1101 - 13                 0   0     0
+1110 - 14                 1   0     1
+1111 - 15                 0   1     1
+                          1   1     1
+
+  Shifts Left (<<)                 Shifts Right (>>)
+                  *m = magnitude*
+    a     m     a<<m                a     m     a>>m
+  0101    1     1010              0101    1     0010
+  0101    2     0100              0101    2     0001
+  0101    3     1000              0101    3     0000
+  0101    4     0000              0101    4     0000
+
+Sign extension (when we have a 1 in high order bit):
+-> negative values
+    a     m    a>>m
+  1010    1    1101
+  1010    2    1110
+  1010    3    1111      (note that the smallest possible value is -1)
+  
+  Let's take a snigned nibble representing -2:
+  
+  1110 (-2)
+  
+Now, if we right-shift 1, we'll have:
+  1111 (-1)
+
+This is a division by two...
+
+Let's try again with -4:
+
+  1100 (-4)and shift it once to the right:
+  1110 (-2)
+  
+There we go. Division of -4 by 2 = -2
+
+Let's right shift by 1 the number 6:
+
+  0110 (6)   >> 1
+  0011 (3)
+
+There we go. Division by 2.
+
+This would be integer division, I'm assuming. So if the number has a remainder... what then?
+
+Let's divide -5:
+
+  1011 (-5) >> 1
+  1101 (-3) So, the division of -5 by 2 = -3
+  
+This should be the exact same result if we divide -6 by 2. Let's check then:
+
+  1010 (-6) >> 1
+  1101 (-3) Same result.
+  
+  So, we're rounding up. It's not integer division (which, afak in C, just floors the result
+
+Checking it, let's shift once 5 and 6 to the right by one:
+
+  6 results in 3, as we know. Now 5:
+  0101 >> 1
+  0010 Resulting in 2. 
+  
+  So, apparently, and until further proof, positive values are right shifted into floored values - meaning that for positive values we are indeed getting integer C division as I've seen so far (we're flooring the values).
+
+                       --snip--
+Right. So, let's work instead with bytes, instead of nibbles, and try right shifts for higher values (note to self: I'm assuming that left shifts are doing the opposite and therefore multiplying).
+
+the number 36 positive and negative:
+
+ 00100100  (+36)
+ 11011100  (-36)
+
+Let's start by shifting right by one, to halve the values:
+
+ 00100100 (36) >> 1: 00010010 (18)
+ 11011100 (-36) >> 1: 11101110 (-18)
+ 
+ Let's now shift right by two:
+ 
+ 00100100 (36) >> 2: 00001001 (9)
+ 11011100 (-36) >> 11110111   (-9)
+ 
+ We have, basically divided by 4 by moving right twice 
+ 
+ Makes sense. Everytime we move one to the right we're halving what we had before
+ 
+ Let's now move to the left (can we do it for negative values?)
+ 
+  00100100 (36) << 1: 01001000 (72) yup, doubled 36
+  11011100 (-36) << 1: 10111000 (-72) yup, double -36
+ 
+                        --snip-- 
+So, let's take a = 6 (0110) and b = 12 (1100)
+
+~a = 1001  (9 in decimal)
+a & b = 0100 (4 in decimal)
+a | b = 1110 (14 in decimal)
+a ^ b = 1010 (10 in decimal)                         
+                         --snip--
+                         
+Time to practice
+
