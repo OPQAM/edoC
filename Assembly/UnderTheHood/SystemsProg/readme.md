@@ -17,4 +17,11 @@ We could, instead already define the program's name and run that:
 
 gcc -Wall -Wextra -g -std=c11 bitPatterns.c -o bitPatterns && ./bitPatterns
 
+Fri 16 Feb 17:36:56 WET 2024
+debug.c was copied from a video, to be analyzed.
+I added a debugOld.c to keep an original version of the code.
+The printed line was 'What even is life?'
+
+Added the folders from the SystemsProg course to the Lectures folder, and added it to .gitignore
+
 
