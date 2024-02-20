@@ -20,4 +20,12 @@ Initialize your variables!
 
 --snip--
 
+Side note: the need to initialize the variable would have been made clear if we had compiled the script with extra warnings:
 
+. gcc -Wextra -Wall -g -std=c11 debug.c
+
+As soon as we compile the code we get a warning, stating tat 'result' is being used uninitialized (!).
+
+Initialize your rudy variables!
+
+--snip--
