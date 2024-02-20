@@ -26,6 +26,6 @@ Side note: the need to initialize the variable would have been made clear if we 
 
 As soon as we compile the code we get a warning, stating tat 'result' is being used uninitialized (!).
 
-Initialize your rudy variables!
+![Initialize your damn variables!](img/extraWarnings.png)
 
 --snip--
