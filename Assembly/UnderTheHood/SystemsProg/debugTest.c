@@ -5,6 +5,9 @@
 uint32_t max(uint32_t, uint32_t);
 
 int main() {
+
+	printf("Da fuck is happening?!\n");
+
 	uint32_t i, h;
 	i = 0;
 	h = 100;
