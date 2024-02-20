@@ -4,15 +4,19 @@ The main issue with this code is the initialization of variables without
 value attribution. We are starting a variable called 'result' but we're not
 assigning it any value at all.
 
-By 'chance' (?) it's 0 at the start (can it just be something else unexpected?)
-and then gets transformed to 100, which makes the program run funky.
+The value of result is '0' at the start because everything below the stack is
+'zeroed out', meaning that it gets filled with zeros.
 
-Note that on the video example, the printing of a line at the start of the
-program resulted in the first if also returning a line. That didn't happened
-with my version of the code - apparently a clear demonstration of the 
-unpredictability of not setting a value to the variable (unexpected behavior).
+Then, result becomes 100 as a consequence of the program logic.
 
-We must pay attention to our variables, our limits of action, etc.
+When adding a printed line at the start, and then going through the debugger, we can see that at a point in time, result actually has the value of 32767. This makes it so that the second if statement also prints its contents, and thus we get the second unexpected result.
+
+Incredibly interesting.
+
+Apparently, this is happening because that line is placing all those values on
+the stack and it happens that the memoty position of 'result' is then occupied by that garbage value, which is greater than our tests, so actually interferes with them...
+
+Initialize your variables!
 
 --snip--
 
