@@ -29,3 +29,39 @@ As soon as we compile the code we get a warning, stating tat 'result' is being u
 ![Initialize your damn variables!](img/extraWarnings.png)
 
 --snip--
+
+Wed 21 Feb 19:34:43 WET 2024
+
+**GNU Debugger -Useful Commands:**
+
+*(gdb)*
+
+. start -  
+
+. run - 
+
+. quit - 
+
+. where - 
+
+. list - 
+
+. break [file:line] if [expression] - 
+
+. watch [expression] - 
+
+. continue (c) - 
+
+. step (s) - 
+
+. next (n) - 
+
+. finish (fin) - 
+
+. info locals - 
+
+. info args - 
+
+. print (p) [expression] - 
+
+--snip--
