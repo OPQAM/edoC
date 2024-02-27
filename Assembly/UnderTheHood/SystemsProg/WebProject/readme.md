@@ -23,3 +23,12 @@ This is being done on a tight schedule.
 
 --snip--
 
+Added some more text to the gnu file - explaining simple commands that we can do with the gdb.
+
+Need to add another file showcasing what the program is doing from the POV of the debugger
+
+Need to add a short text explaining the stack. What it is, etc. Make it understandable and easy to read.
+
+--snip--
+
+

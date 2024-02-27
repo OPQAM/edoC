@@ -11,13 +11,13 @@ So, if the user inputs 4, the result will be:
  ### ###
 #### ####
 
-So, a cute pyramid pair.
+So, a cool pyramid pair.
 
 Ok, there are quite a few things we'll be looking at. But let's start with the compiler.
 
 In order to compile this script, we'll use gcc:
 
-#CHECK BELOW
+#CHECK BELOW - can I close this '''bash box?
 
 ```bash
 . gcc -o pyramidExample pyramidExample.c -lcs50
