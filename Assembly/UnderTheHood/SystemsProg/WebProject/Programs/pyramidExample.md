@@ -42,26 +42,7 @@ So, to run this program, we can:
 ./pyramidExample
 
 Like this:
-# IMAGE HERE FOR THE SIMPLE GCC compilation
+
 ![Placeholder ext description not shown](path/to/the/image/from/this/location) #place here small gif showing program
 
 
-But while using the GCC or GNU Compiler Collection, we have a few choices on how exactly to compile our code, to later be analized by the GDB or GNU Debugger.
-
-In our first attempt, we compiled the code in a simple fashion, so to speak, and didn't include any debugging symbols. This means that we won't have variables or other niceties, and instead will see the code in Assembly, with registers and so on.
-
-But we can compile it differently, and include debugging symbols and controls. Let's try that with the following command:
-
-. gcc -Wall -Wextra -g -std=c11 pyramidExample.C -o pyramidExample2 -lcs50
-
-# IMAGE HERE FOR THE DEBUGGING GCC compilation
-![Placeholder description not shown](path/to/the/image/from/this/location) #place here small gif showin    g program
-
-Let's explain briefly what those commands are doing:
-
--> -Wall               (enable all warnings)
--> -Wextra             (enable extra warnings)
--> -g                  (debugging)
--> -std=c11            (the C language standard - a 2011 revision of C)
-
-Let's now open the debugger and take a gander at what it's doing and what commands we can use.
