@@ -6,3 +6,20 @@ The idea is to create a simple website with html and css on whatever subject I w
 I will be creating this website on the cloud. A proper, albeit simple website, that will focus on systems programming. This is a subject that I am myself learning, so it might be a good excuse to organize my materials and thoughts on the matter.
 
 --snip--
+
+Tue 27 Feb 11:04:22 WET 2024
+
+Need to finish writing the gcc and gdb .md files, create and edit the small snippet gifs and then start working on the HTML and CSS.
+
+When that is (mostly) set up, I can create the infraestructure on the cloud to house my webpage.
+
+Need to add a (free) certificate.
+
+Need to buy a (cheap) domain.
+
+Need to take care of basic security needs.
+
+This is being done on a tight schedule.
+
+--snip--
+
