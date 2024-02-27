@@ -29,6 +29,7 @@ Need to add another file showcasing what the program is doing from the POV of th
 
 Need to add a short text explaining the stack. What it is, etc. Make it understandable and easy to read.
 
+Also added the file explainingMemoryLeaks.md. 
+It's important and relevant to explain a bit more about how memory works, how it can leak and the consequences of that
+
 --snip--
-
-
