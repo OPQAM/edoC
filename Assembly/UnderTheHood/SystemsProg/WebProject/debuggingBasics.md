@@ -36,9 +36,9 @@ Inside gdb we can do a series of things, namely:
 
 . continue (c) - Resumes program execution until a breakpoint is found.
 
-. step (s) - Executes the current line of code and stops at the first possible moment.
+. step (s) - Executes the current line of code and stops at the first possible moment. We usually step through code that we care about.
 
-. next (n) - Unlike 'step' this doesn't step into function calls.
+. next (n) - Unlike 'step' this doesn't step into function calls. We usually apply next to code that we don't care about, for example, stepping over a function and moving onto the next piece of code.
 
 . finish (fin) - Continues the execution until the current function returns.
 
@@ -49,4 +49,6 @@ Inside gdb we can do a series of things, namely:
 . print (p) [expression] - Evaluates and prints the value of an expression.
 
 --snip--
+
+Ideally, we set breakpoints just before a bug in the code or a piece of code we want to inspect, of course, and we use watchpoints on variables to confirm expectations of how variables are updating
 
