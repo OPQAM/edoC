@@ -33,3 +33,7 @@ Also added the file explainingMemoryLeaks.md.
 It's important and relevant to explain a bit more about how memory works, how it can leak and the consequences of that
 
 --snip--
+
+Other possible avenues to explore (if I have the time for it):
+
+data structures, pointers and memory management, gile I/O, debugging techniques, potimization techniques, concurrency and parallelism, security
