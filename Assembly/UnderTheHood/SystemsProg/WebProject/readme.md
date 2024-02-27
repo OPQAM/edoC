@@ -37,3 +37,4 @@ It's important and relevant to explain a bit more about how memory works, how it
 Other possible avenues to explore (if I have the time for it):
 
 data structures, pointers and memory management, gile I/O, debugging techniques, potimization techniques, concurrency and parallelism, security
+Added a folder for docs which are sketch-ready. These only need a little work to be sent to the webpage
