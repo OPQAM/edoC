@@ -1,10 +1,10 @@
 Assembly serves as a human-readable abstraction of machine code, enabling programmers to write code without delving into the binary representation of instructions.
 
-Despite the development of higher-level programming languages with increased levels of abstraction, Assembly remains relevant today for tackling low-level challenges such as optimizing performance, accessing hardware directly, and malware analyzis.
+Despite the development of higher-level programming languages with increased levels of abstraction, Assembly remains relevant today for tackling low-level challenges such as optimizing performance or accessing hardware directly (in embedded systems programming or in writing device drivers, as examples), and malware analyzis.
 
 Unlike higher-level languages, Assembly does not have a single standardized version; instead, there are various Assembly languages for specific CPU architectures. This close tie to hardware makes Assembly highly dependent on the actual system's architecture.
 
-Assembly language(s) consists of a set of instructions that directly correspond to machine instructions, manipulating data stored in extremely fast memory locations known as registers (think of them as variables). These registers hold values that are manipulated by the program's instructions to perform computations and control flow.
+Assembly language(s) consists of a set of instructions that directly correspond to machine instructions, manipulating data stored in extremely fast memory locations known as registers (think of them as variables). These registers hold values that are manipulated by the program's instructions to perform computations and control flow. Registers are part of the CPU and are used to store data temporarily during program execution.
 
 When working with Assembly code, developers can use tools like GCC for compiling and debugging, along with utilities like GDB (the GNU Debugger) for analyzing code step by step, setting breakpoints, and learning how the computer really processes the instructions set in the code.
 

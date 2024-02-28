@@ -8,7 +8,7 @@ These four steps are, in order:
 
 1) Preprocessing
 
-During preprocessing, directives like #include<...> are processed to include the content of header files into the source code.
+During preprocessing, directives like #include<...> are processed to include the content of header files into the source code. Preprocessing handles tasks like including header files and macro expansions, which, in turn, help organizing code and making it more mantainable.
 
 2) Compiling
 
@@ -16,7 +16,7 @@ In this step, the source code written in C is translated into Assembly language,
 
 3) Assembling
 
-The assembly code that was generated in the previous step is then assembled into binary machine code (a sequence of 1's and 0's that the computer's CPU can execute).
+The assembly code that was generated in the previous step is then assembled into binary machine code (a sequence of 1's and 0's that the computer's CPU can execute). This involves generating object files (.o files) from assembly code and then converting those objects into machine code.
 
 4) Linking
 

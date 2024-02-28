@@ -10,7 +10,7 @@ And then open the compiled program with our debugger, we get this:
 
 
 Let's now compare this result with:
-. gcc -Wall -Wextra -g -std=c11 pyramidExample.C -o pyramidExample2 -lcs50
+. gcc -Wall -Wextra -g -std=c11 pyramidExample.c -o pyramidExample2 -lcs50
 
 ![Placeholder ext description not shown](path/to/the/image/from/this/location) #place here small gif showing program
 
