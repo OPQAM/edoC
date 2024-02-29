@@ -1,4 +1,4 @@
-Let's talk about Two's Complement and Bitwise Operations.
+Let's talk about Two's Complement
 
 Two's complement is a way for us to represent (and work with) negative numbers in binary.
 
