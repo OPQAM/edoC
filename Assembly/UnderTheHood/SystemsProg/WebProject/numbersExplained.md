@@ -4,7 +4,7 @@ Let's talk about two: Two's Complement and Bitwise Operations
 
 Two's complement is a way for us to represent negative numbers in binary.
 
-If computers basically understand 0's and 1's it would be a good idea to have a way to represent negative numbers, and therefore do subtraction (the addition of a positive and a negative value).
+Since computers basically understand 0's and 1's it would be a good idea to have a way to represent negative numbers, and therefore do subtraction (the addition of a positive and a negative value).
 
 Let's consider byte-sized numbers.
 
@@ -24,4 +24,21 @@ Zero, of course, remains unchanged (00000000)
 
 This way, it's very simple to understand why we can only have about half the number of positive values when we create a signed integer as opposed to a unsigned integer (we're basically 'offering' up the first important bit as a negative value, allowing for our signed range of values).
 
+Here's a trick to quickly get from a number to its symmetric:
 
+1) Pick a number, say 00000101 (5 in decimal)
+
+2) Flip its bits, so 11111010
+
+3) Now add one bit, which results in 11111011 (so... -5 in decimal)
+
+If you find this confusing, remember that the leading bit is a negative (-128 in this case) and that value is added to every other value to its right. Quickly looking at 1111011 we can see that that would be 127 - 4 (decimal). So, 123. Therefore, the final sum would be 123 - 128, or -5.
+
+You might also be wondering how to take a negative number and go from a nibble sized value toa byte sized value, for example.
+
+Decimal: -5, Binary (nibble): 1011
+             Binary (byte): 11111011
+
+So, we just added 1's to the left.
+
+And that is the pattern! If we want to work with a bigger memory, let's say, we just add 1's to the left to get the respective negative value (or 0's to get the respective positive value, of course).
