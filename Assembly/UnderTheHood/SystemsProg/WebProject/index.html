@@ -1,0 +1,2081 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  <meta name="description" content="Teaching hard concepts in simple and interesting manners, focusing on Linux and free open software, the GNU debugger, and covering compilation and assembly of code.">
+  <link rel="shortcut icon" href="assets/images/logo5.png" type="image/x-icon">
+  
+  <title>Systems Programming Concepts</title>
+  
+  
+  <link rel="stylesheet" href="assets/web/assets/mobirise-icons2/mobirise2.css">
+  <link rel="stylesheet" href="assets/parallax/jarallax.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-grid.min.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-reboot.min.css">
+  <link rel="stylesheet" href="assets/dropdown/css/style.css">
+  <link rel="stylesheet" href="assets/socicon/css/styles.css">
+  <link rel="stylesheet" href="assets/animatecss/animate.css">
+  <link rel="stylesheet" href="assets/theme/css/style.css">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;700&display=swap"></noscript>
+  <link rel="preload" as="style" href="assets/mobirise/css/additional.css"><link rel="stylesheet" href="assets/mobirise/css/additional.css" type="text/css">
+  
+  <style>:root{ --background: #FEF5E9; --dominant-color: #F8961E; --primary-color: #277DA1; --secondary-color: #E45A53; --success-color: #20AC6B; --danger-color: #AE1E2C; --warning-color: #CC9900; --info-color: #0AA3C2; --background-text: #000000; --dominant-text: #000000; --primary-text: #FFFFFF; --secondary-text: #FFFFFF; --success-text: #FFFFFF; --danger-text: #FFFFFF; --warning-text: #000000; --info-text: #FFFFFF;}</style>
+</head>
+<body>
+
+
+
+    <style>
+.cid-u5FpnaY8nM  {
+  z-index: 1000;
+  width: 100%;
+  position: relative;
+}
+.cid-u5FpnaY8nM  .dropdown-item:before {
+  font-family: Moririse2 !important;
+  content: "\e966";
+  display: inline-block;
+  width: 0;
+  position: absolute;
+  left: 1rem;
+  top: 0.5rem;
+  margin-right: 0.5rem;
+  line-height: 1;
+  font-size: inherit;
+  vertical-align: middle;
+  text-align: center;
+  overflow: hidden;
+  transform: scale(0, 1);
+  transition: all 0.25s ease-in-out;
+}
+@media (max-width: 767px) {
+  .cid-u5FpnaY8nM  .navbar-toggler {
+    transform: scale(0.8);
+  }
+}
+.cid-u5FpnaY8nM  .navbar-brand {
+  flex-shrink: 0;
+  align-items: center;
+  margin-right: 0;
+  padding: 10px 0;
+  transition: all 0.3s;
+  word-break: break-word;
+  z-index: 1;
+}
+.cid-u5FpnaY8nM  .navbar-brand img {
+  max-width: 100%;
+  max-height: 100%;
+}
+.cid-u5FpnaY8nM  .navbar-brand .navbar-caption {
+  line-height: inherit !important;
+}
+.cid-u5FpnaY8nM  .navbar-brand .navbar-logo a {
+  outline: none;
+}
+.cid-u5FpnaY8nM  .navbar-nav {
+  margin: auto;
+  margin-left: 0;
+  margin-left: auto;
+}
+.cid-u5FpnaY8nM  .navbar-nav .nav-item {
+  padding: 0 !important;
+  transition: 0.3s all !important;
+}
+.cid-u5FpnaY8nM  .navbar-nav .nav-item .nav-link {
+  padding: 16px !important;
+  margin: 0 !important;
+  border-radius: 1rem !important;
+  transition: 0.3s all !important;
+}
+.cid-u5FpnaY8nM  .navbar-nav .nav-item .nav-link:hover {
+  background-color: rgba(27, 31, 10, 0.06);
+}
+.cid-u5FpnaY8nM  .navbar-nav .open .nav-link::after {
+  transform: rotate(180deg);
+}
+@media (min-width: 992px) {
+  .cid-u5FpnaY8nM  .navbar-nav .open .nav-link::before {
+    content: "";
+    width: 100%;
+    height: 20px;
+    top: 100%;
+    background: transparent;
+    position: absolute;
+  }
+}
+.cid-u5FpnaY8nM  .navbar-nav .dropdown-item {
+  padding: 12px !important;
+  border-radius: 0.5rem !important;
+  margin: 0 8px !important;
+  transition: 0.3s all !important;
+}
+.cid-u5FpnaY8nM  .navbar-nav .dropdown-item:hover {
+  background-color: rgba(27, 31, 10, 0.06);
+}
+@media (min-width: 992px) {
+  .cid-u5FpnaY8nM  .navbar-nav {
+    padding-left: 1.5rem;
+  }
+}
+.cid-u5FpnaY8nM  .nav-link {
+  width: fit-content;
+  position: relative;
+}
+.cid-u5FpnaY8nM  .navbar-logo {
+  margin: 0 !important;
+}
+@media (max-width: 767px) {
+  .cid-u5FpnaY8nM  .navbar-logo {
+    padding-left: 0;
+  }
+}
+.cid-u5FpnaY8nM  .navbar-caption {
+  padding-left: 1rem;
+  padding-right: 0.5rem;
+}
+@media (max-width: 767px) {
+  .cid-u5FpnaY8nM  .nav-dropdown {
+    padding-bottom: 0.5rem;
+  }
+}
+.cid-u5FpnaY8nM  .nav-dropdown .link.dropdown-toggle::after {
+  margin-left: 0.5rem;
+  margin-top: 0.2rem;
+  transition: 0.3s all;
+}
+.cid-u5FpnaY8nM  .container {
+  display: flex;
+  height: 90px;
+  padding: 0.5rem 0.6rem;
+  flex-wrap: nowrap;
+  background: rgba(255, 255, 255, 0.8) !important;
+  left: 0;
+  right: 0;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: flex-end;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: 100vw;
+  margin-top: 1rem;
+  background-color: #ffffff;
+  box-shadow: 0 30px 60px 0 rgba(27, 31, 10, 0.08);
+}
+@media (max-width: 992px) {
+  .cid-u5FpnaY8nM  .container {
+    padding-right: 2rem;
+  }
+}
+@media (max-width: 767px) {
+  .cid-u5FpnaY8nM  .container {
+    width: 95%;
+    height: 56px !important;
+    padding-right: 1rem;
+    margin-top: 0rem;
+  }
+}
+.cid-u5FpnaY8nM  .iconfont-wrapper {
+  color: #000000 !important;
+  font-size: 1.5rem;
+  padding-right: 0.5rem;
+}
+.cid-u5FpnaY8nM  .dropdown-menu {
+  flex-wrap: wrap;
+  flex-direction: column;
+  max-width: 100%;
+  padding: 12px 4px !important;
+  border-radius: 1.5rem;
+  transition: 0.3s all !important;
+  min-width: auto;
+  background: #ffffff;
+  background: rgba(255, 255, 255, 0.8) !important;
+}
+.cid-u5FpnaY8nM  .nav-item:focus,
+.cid-u5FpnaY8nM  .nav-link:focus {
+  outline: none;
+}
+.cid-u5FpnaY8nM  .dropdown .dropdown-menu .dropdown-item {
+  width: auto;
+  transition: all 0.25s ease-in-out;
+}
+.cid-u5FpnaY8nM  .dropdown .dropdown-menu .dropdown-item::after {
+  right: 0.5rem;
+}
+.cid-u5FpnaY8nM  .dropdown .dropdown-menu .dropdown-item .mbr-iconfont {
+  margin-right: 0.5rem;
+  vertical-align: sub;
+}
+.cid-u5FpnaY8nM  .dropdown .dropdown-menu .dropdown-item .mbr-iconfont:before {
+  display: inline-block;
+  transform: scale(1, 1);
+  transition: all 0.25s ease-in-out;
+}
+.cid-u5FpnaY8nM  .collapsed .dropdown-menu .dropdown-item:before {
+  display: none;
+}
+.cid-u5FpnaY8nM  .collapsed .dropdown .dropdown-menu .dropdown-item {
+  padding: 0.235em 1.5em 0.235em 1.5em !important;
+  transition: none;
+  margin: 0 !important;
+}
+.cid-u5FpnaY8nM  .navbar {
+  min-height: 90px;
+  transition: all 0.3s;
+  border-bottom: 1px solid transparent;
+  background: transparent !important;
+  padding: 0 !important;
+  border: none !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+}
+.cid-u5FpnaY8nM  .navbar.opened {
+  transition: all 0.3s;
+}
+.cid-u5FpnaY8nM  .navbar .dropdown-item {
+  padding: 0.5rem 1.8rem;
+}
+.cid-u5FpnaY8nM  .navbar .navbar-logo img {
+  min-width: 6rem;
+  object-fit: cover;
+}
+.cid-u5FpnaY8nM  .navbar .navbar-collapse {
+  z-index: 1;
+  justify-content: flex-end;
+}
+.cid-u5FpnaY8nM  .navbar.collapsed {
+  justify-content: center;
+}
+.cid-u5FpnaY8nM  .navbar.collapsed .nav-item .nav-link::before {
+  display: none;
+}
+.cid-u5FpnaY8nM  .navbar.collapsed.opened .dropdown-menu {
+  top: 0;
+}
+@media (min-width: 992px) {
+  .cid-u5FpnaY8nM  .navbar.collapsed.opened:not(.navbar-short) .navbar-collapse {
+    max-height: calc(98.5vh - 3rem);
+  }
+}
+.cid-u5FpnaY8nM  .navbar.collapsed .dropdown-menu .dropdown-submenu {
+  left: 0 !important;
+}
+.cid-u5FpnaY8nM  .navbar.collapsed .dropdown-menu .dropdown-item:after {
+  right: auto;
+}
+.cid-u5FpnaY8nM  .navbar.collapsed .dropdown-menu .dropdown-toggle[data-toggle="dropdown-submenu"]:after {
+  margin-left: 0.5rem;
+  margin-top: 0.2rem;
+  border-top: 0.35em solid;
+  border-right: 0.35em solid transparent;
+  border-left: 0.35em solid transparent;
+  border-bottom: 0;
+  top: 41%;
+}
+.cid-u5FpnaY8nM  .navbar.collapsed ul.navbar-nav li {
+  margin: auto;
+}
+.cid-u5FpnaY8nM  .navbar.collapsed .dropdown-menu .dropdown-item {
+  padding: 0.25rem 1.5rem;
+  text-align: center;
+}
+.cid-u5FpnaY8nM  .navbar.collapsed .icons-menu {
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+@media (max-width: 767px) {
+  .cid-u5FpnaY8nM  .navbar {
+    min-height: 72px;
+  }
+  .cid-u5FpnaY8nM  .navbar .navbar-logo img {
+    height: 2.5rem !important;
+    min-width: 2.5rem !important;
+  }
+}
+@media (max-width: 991px) {
+  .cid-u5FpnaY8nM  .navbar .nav-item .nav-link::before {
+    display: none;
+  }
+  .cid-u5FpnaY8nM  .navbar.opened .dropdown-menu {
+    top: 0;
+  }
+  .cid-u5FpnaY8nM  .navbar .dropdown-menu .dropdown-submenu {
+    left: 0 !important;
+  }
+  .cid-u5FpnaY8nM  .navbar .dropdown-menu .dropdown-item:after {
+    right: auto;
+  }
+  .cid-u5FpnaY8nM  .navbar .dropdown-menu .dropdown-toggle[data-toggle="dropdown-submenu"]:after {
+    margin-left: 0.5rem;
+    margin-top: 0.2rem;
+    border-top: 0.35em solid;
+    border-right: 0.35em solid transparent;
+    border-left: 0.35em solid transparent;
+    border-bottom: 0;
+    top: 40%;
+  }
+  .cid-u5FpnaY8nM  .navbar .dropdown-menu .dropdown-item {
+    padding: 0.25rem 1.5rem !important;
+    text-align: center;
+  }
+  .cid-u5FpnaY8nM  .navbar .navbar-brand {
+    flex-shrink: initial;
+    flex-basis: auto;
+    word-break: break-word;
+    padding-right: 10px;
+  }
+  .cid-u5FpnaY8nM  .navbar .navbar-toggler {
+    flex-basis: auto;
+  }
+  .cid-u5FpnaY8nM  .navbar .icons-menu {
+    padding-left: 0;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+}
+.cid-u5FpnaY8nM  .navbar.navbar-short .navbar-logo img {
+  height: 2rem;
+}
+.cid-u5FpnaY8nM  .dropdown-item.active,
+.cid-u5FpnaY8nM  .dropdown-item:active {
+  background-color: transparent;
+}
+.cid-u5FpnaY8nM  .navbar-expand-lg .navbar-nav .nav-link {
+  padding: 0;
+}
+.cid-u5FpnaY8nM  .nav-dropdown .link.dropdown-toggle {
+  margin-right: 1.667em;
+}
+.cid-u5FpnaY8nM  .nav-dropdown .link.dropdown-toggle[aria-expanded="true"] {
+  margin-right: 0;
+  padding: 0.667em 1.667em;
+}
+.cid-u5FpnaY8nM  .navbar.navbar-expand-lg .dropdown .dropdown-menu {
+  background: #ffffff;
+}
+.cid-u5FpnaY8nM  .navbar.navbar-expand-lg .dropdown .dropdown-menu .dropdown-submenu {
+  margin: 0;
+  left: 105%;
+  transform: none;
+  top: -12px;
+}
+.cid-u5FpnaY8nM  .navbar .dropdown.open > .dropdown-menu {
+  display: flex;
+}
+.cid-u5FpnaY8nM  ul.navbar-nav {
+  flex-wrap: wrap;
+}
+.cid-u5FpnaY8nM  .navbar-buttons {
+  text-align: center;
+  min-width: 140px;
+}
+@media (max-width: 992px) {
+  .cid-u5FpnaY8nM  .navbar-buttons {
+    text-align: left;
+  }
+}
+.cid-u5FpnaY8nM  button.navbar-toggler {
+  outline: none;
+  width: 31px;
+  height: 20px;
+  cursor: pointer;
+  transition: all 0.2s;
+  position: relative;
+  align-self: center;
+}
+.cid-u5FpnaY8nM  button.navbar-toggler .hamburger span {
+  position: absolute;
+  right: 0;
+  width: 30px;
+  height: 2px;
+  border-right: 5px;
+  background-color: #000000;
+}
+.cid-u5FpnaY8nM  button.navbar-toggler .hamburger span:nth-child(1) {
+  top: 0;
+  transition: all 0.2s;
+}
+.cid-u5FpnaY8nM  button.navbar-toggler .hamburger span:nth-child(2) {
+  top: 8px;
+  transition: all 0.15s;
+}
+.cid-u5FpnaY8nM  button.navbar-toggler .hamburger span:nth-child(3) {
+  top: 8px;
+  transition: all 0.15s;
+}
+.cid-u5FpnaY8nM  button.navbar-toggler .hamburger span:nth-child(4) {
+  top: 16px;
+  transition: all 0.2s;
+}
+.cid-u5FpnaY8nM  nav.opened .hamburger span:nth-child(1) {
+  top: 8px;
+  width: 0;
+  opacity: 0;
+  right: 50%;
+  transition: all 0.2s;
+}
+.cid-u5FpnaY8nM  nav.opened .hamburger span:nth-child(2) {
+  transform: rotate(45deg);
+  transition: all 0.25s;
+}
+.cid-u5FpnaY8nM  nav.opened .hamburger span:nth-child(3) {
+  transform: rotate(-45deg);
+  transition: all 0.25s;
+}
+.cid-u5FpnaY8nM  nav.opened .hamburger span:nth-child(4) {
+  top: 8px;
+  width: 0;
+  opacity: 0;
+  right: 50%;
+  transition: all 0.2s;
+}
+.cid-u5FpnaY8nM  .navbar-dropdown {
+  padding: 0 1rem;
+}
+.cid-u5FpnaY8nM  a.nav-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cid-u5FpnaY8nM  .icons-menu {
+  flex-wrap: nowrap;
+  display: flex;
+  justify-content: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.3rem;
+  text-align: center;
+}
+@media (max-width: 992px) {
+  .cid-u5FpnaY8nM  .icons-menu {
+    justify-content: flex-start;
+    margin-bottom: 0.5rem;
+  }
+}
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .cid-u5FpnaY8nM  .navbar {
+    height: 70px;
+  }
+  .cid-u5FpnaY8nM  .navbar.opened {
+    height: auto;
+  }
+  .cid-u5FpnaY8nM  .nav-item .nav-link:hover::before {
+    width: 175%;
+    max-width: calc(100% + 2rem);
+    left: -1rem;
+  }
+}
+.cid-u5FpnaY8nM  .navbar .dropdown > .dropdown-menu {
+  display: none;
+  width: max-content;
+  max-width: 500px !important;
+  transform: translateX(-50%);
+  top: calc(100% + 20px);
+  left: 50%;
+}
+.cid-u5FpnaY8nM  .navbar .dropdown > .dropdown-menu .dropdown-item {
+  line-height: 1 !important;
+}
+.cid-u5FpnaY8nM  .navbar .dropdown > .dropdown-menu .dropdown .dropdown-item {
+  align-items: center;
+  display: flex;
+  height: max-content !important;
+  min-height: max-content !important;
+}
+.cid-u5FpnaY8nM  .navbar .dropdown > .dropdown-menu .dropdown .dropdown-item::after {
+  display: inline-block;
+  position: static;
+  margin-left: 0.5rem;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  transition: 0.3s all;
+  transform: rotate(-90deg);
+}
+.cid-u5FpnaY8nM  .navbar .dropdown > .dropdown-menu .dropdown.open .dropdown-item::after {
+  transform: rotate(0deg);
+}
+.cid-u5FpnaY8nM  .mbr-section-btn {
+  margin: -0.6rem -0.6rem;
+}
+.cid-u5FpnaY8nM  .navbar-toggler {
+  margin-left: 12px;
+  margin-right: 8px;
+  order: 1000;
+}
+@media (max-width: 991px) {
+  .cid-u5FpnaY8nM  .navbar-brand {
+    margin-right: auto;
+  }
+  .cid-u5FpnaY8nM  .navbar-collapse {
+    z-index: -1 !important;
+    position: absolute;
+    top: 110%;
+    left: 0;
+    width: 100%;
+    padding: 1rem;
+    border-radius: 1.5rem;
+    background: #ffffff;
+    opacity: 1;
+    border-color: rgba(255, 255, 255, 0.8) !important;
+    background: rgba(255, 255, 255, 0.8) !important;
+    backdrop-filter: blur(8px);
+  }
+  .cid-u5FpnaY8nM  .navbar-nav .nav-item .nav-link::after {
+    margin-left: 10px;
+  }
+  .cid-u5FpnaY8nM  .navbar-nav .dropdown-item:hover {
+    background-color: rgba(27, 31, 10, 0.06);
+  }
+  .cid-u5FpnaY8nM  .navbar .dropdown > .dropdown-menu {
+    max-width: 100% !important;
+    transform: translateX(0);
+    top: 10px;
+    left: 0;
+    padding: 8px !important;
+    border-radius: 1rem;
+    background-color: rgba(27, 31, 10, 0.04) !important;
+  }
+  .cid-u5FpnaY8nM  .navbar .dropdown > .dropdown-menu .dropdown-item {
+    padding: 8px !important;
+    line-height: 1 !important;
+    margin-bottom: 4px !important;
+  }
+  .cid-u5FpnaY8nM  .navbar .dropdown > .dropdown-menu .dropdown .dropdown-item {
+    align-items: center;
+    display: flex;
+    height: max-content !important;
+    min-height: max-content !important;
+  }
+  .cid-u5FpnaY8nM  .navbar .dropdown > .dropdown-menu .dropdown .dropdown-item::after {
+    display: inline-block;
+    position: static;
+    margin-left: 0.5rem;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    transition: 0.3s all;
+    transform: rotate(0deg);
+  }
+  .cid-u5FpnaY8nM  .navbar .dropdown > .dropdown-menu .dropdown.open .dropdown-item::after {
+    transform: rotate(180deg);
+  }
+  .cid-u5FpnaY8nM  .navbar .dropdown > .dropdown-menu .dropdown-submenu {
+    position: static;
+    width: 100%;
+    max-width: 100% !important;
+    transform: translateX(0) !important;
+    top: 0;
+    left: 0;
+    padding: 8px !important;
+    border-radius: 1rem;
+    background-color: rgba(27, 31, 10, 0.04) !important;
+  }
+  .cid-u5FpnaY8nM  .navbar .dropdown.open > .dropdown-menu {
+    display: flex !important;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+@media (max-width: 575px) {
+  .cid-u5FpnaY8nM  .navbar-collapse {
+    padding: 1rem;
+  }
+}
+</style>
+
+<section class="menu menu2 cid-u5FpnaY8nM" once="menu" id="menu-5-u5FpnaY8nM">
+  <nav class="navbar navbar-dropdown navbar-fixed-top navbar-expand-lg">
+    <div class="container">
+      <div class="navbar-brand">
+        <span class="navbar-logo">
+					<a href="https://linux.org">
+						<img src="assets/images/photo-1518770660439-4636190af475.jpeg" style="height: 4.3rem;">
+					</a>
+				</span>
+				<span class="navbar-caption-wrap">
+          <a class="navbar-caption text-black display-4" href="https://en.wikipedia.org/wiki/Systems_programming">Logo Stuff</a>
+        </span>
+      </div>
+      <button class="navbar-toggler" type="button" data-toggle="collapse"
+        data-bs-toggle="collapse" data-target="#navbarSupportedContent"
+        data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav nav-dropdown" data-app-modern-menu="true">
+          <li class="nav-item">
+            <a class="nav-link link text-black display-4" href="#events-1-u5Fpnb2rtF">First Block</a>
+
+          </li>
+          <li class="nav-item">
+            <a class="nav-link link text-black display-4" href="#"
+              aria-expanded="false">first readings</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link link text-black display-4" href="#faq-1-u5Fpnb1hy4">Second Block</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link link text-black display-4" href="#">second readings</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link link text-black display-4" href="#">Get in Touch</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</section>
+
+    <style>
+.cid-u5FpnaYUXk {
+  display: flex;
+}
+@media (min-width: 768px) {
+  .cid-u5FpnaYUXk {
+    align-items: flex-end;
+  }
+  .cid-u5FpnaYUXk .row {
+    justify-content: flex-start;
+  }
+  .cid-u5FpnaYUXk .content-wrap {
+    padding: 1rem 3rem;
+  }
+}
+@media (max-width: 991px) and (min-width: 768px) {
+  .cid-u5FpnaYUXk .content-wrap {
+    min-width: 50%;
+  }
+}
+@media (max-width: 767px) {
+  .cid-u5FpnaYUXk {
+    -webkit-align-items: center;
+    align-items: flex-end;
+  }
+  .cid-u5FpnaYUXk .mbr-row {
+    -webkit-justify-content: center;
+    justify-content: center;
+  }
+  .cid-u5FpnaYUXk .content-wrap {
+    width: 100%;
+  }
+}
+.cid-u5FpnaYUXk .mbr-fallback-image.disabled {
+  display: none;
+}
+.cid-u5FpnaYUXk .mbr-fallback-image {
+  display: block;
+  background-size: cover;
+  background-position: center center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  background: #000000;
+}
+.cid-u5FpnaYUXk .mbr-section-title,
+.cid-u5FpnaYUXk .mbr-section-subtitle {
+  text-align: left;
+  color: var(--dominant-color, #ffc091);
+}
+.cid-u5FpnaYUXk .mbr-text,
+.cid-u5FpnaYUXk .mbr-section-btn {
+  text-align: left;
+}
+</style>
+<section class="header18 cid-u5FpnaYUXk mbr-fullscreen" data-bg-video="https://www.youtube.com/embed/BqFSHbzSs7U?autoplay&#x3D;1&amp;loop&#x3D;1&amp;playlist&#x3D;BqFSHbzSs7U&amp;t&#x3D;20&amp;mute&#x3D;1&amp;playsinline&#x3D;1&amp;controls&#x3D;0&amp;showinfo&#x3D;0&amp;autohide&#x3D;1&amp;allowfullscreen&#x3D;true&amp;mode&#x3D;transparent" id="hero-15-u5FpnaYUXk">
+  <div class="mbr-overlay" style="opacity: 0.3; background-color: rgb(0, 0, 0);"></div>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="content-wrap col-12 col-md-8">
+        <h1
+          class="mbr-section-title mbr-fonts-style mbr-white mb-4 display-1 animate__animated animate__delay-1s animate__fadeInUp">
+          <strong>My Main Title</strong>
+        </h1>
+        <p class="mbr-fonts-style mbr-text mbr-white mb-4 display-7 animate__animated animate__delay-1s animate__fadeInUp">Let's Embark Together on a Journey of Low Level Learning!</p>
+        <div class="mbr-section-btn">
+          <a class="btn btn-white-outline display-7 animate__animated animate__delay-1s animate__fadeInUp" href="#">Start Learning</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+    <style>
+.cid-u5FpnaZ3Gb {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  background-color: #ffffff;
+}
+.cid-u5FpnaZ3Gb .mbr-fallback-image.disabled {
+  display: none;
+}
+.cid-u5FpnaZ3Gb .mbr-fallback-image {
+  display: block;
+  background-size: cover;
+  background-position: center center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+}
+@media (max-width: 991px) {
+  .cid-u5FpnaZ3Gb .image-wrapper {
+    margin-bottom: 2rem;
+  }
+}
+.cid-u5FpnaZ3Gb .row {
+  flex-direction: row-reverse;
+}
+.cid-u5FpnaZ3Gb .row {
+  align-items: center;
+}
+@media (max-width: 991px) {
+  .cid-u5FpnaZ3Gb .image-wrapper {
+    padding: 1rem;
+  }
+}
+@media (min-width: 992px) {
+  .cid-u5FpnaZ3Gb .text-wrapper {
+    padding: 0 2rem;
+  }
+}
+.cid-u5FpnaZ3Gb .mbr-section-title {
+  color: #000000;
+}
+.cid-u5FpnaZ3Gb .mbr-text,
+.cid-u5FpnaZ3Gb .mbr-section-btn {
+  color: #000000;
+}
+
+</style>
+
+<section class="article4 cid-u5FpnaZ3Gb" id="about-us-4-u5FpnaZ3Gb">
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-12 col-md-12 col-lg-6 image-wrapper">
+				<img class="w-100" src="assets/images/photo-1517433456452-f9633a875f6f.jpeg">
+			</div>
+			<div class="col-12 col-md-12 col-lg">
+				<div class="text-wrapper align-left">
+					<h1 class="mbr-section-title mbr-fonts-style mb-4 display-2">
+						<strong>INTRODUCTORY TEXT</strong>
+					</h1>
+          <!-- DEBUG: Here is the main introductory text -->
+					<p class="mbr-text mbr-fonts-style mb-3 display-7">Welcome my low-level programming website!</p>
+          <p class="mbr-text mbr-fonts-style mb-3 display-7">I created this webpage to help explain some of the hard concepts of systems programming in a simple, accessible manner.</p>
+          <p class="mbr-text mbr-fonts-style mb-3 display-7">The website will be growing in time and adding more information and resources, and I'd love to get your feedback. Are the resources adequate, is there something you'd like to see here? Please let us know.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<style>
+   
+  .cid-u5FpnaZLzi {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background-color: #ffffff;
+  }
+  .cid-u5FpnaZLzi .item:focus,
+  .cid-u5FpnaZLzi span:focus {
+    outline: none;
+  }
+  .cid-u5FpnaZLzi .container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+    overflow: hidden;
+  }
+  .cid-u5FpnaZLzi .content-head {
+    max-width: 800px;
+  }
+  .cid-u5FpnaZLzi .item {
+    color: #ffc091;
+    min-height: 90px;
+    font-weight: bold;
+  }
+  @media (max-width: 768px) {
+    .cid-u5FpnaZLzi .item {
+      min-height: 45px;
+    }
+  }
+  </style>
+
+<section class="gallery10 cid-u5FpnaZLzi" id="features-61-u5FpnaZLzi">
+  <div class="container-fluid">
+      <div class="loop-container">
+        <div class="item display-1" data-linewords="
+          GNU *
+          GNU is Not Unix *
+          GNU is Not Unix is Not Unix *" 
+        data-direction="-1" data-speed="0.05">
+        </div>
+        <div class="item display-1" data-linewords="
+        GNU is Not Unix 
+          is Not Unix is Not Unix *
+          GNU is Not Unix is Not Unix
+          is Not Unix  
+          is Not Unix *
+          GNU is Not Unix is Not Unix
+          is Not Unix is Not Unix 
+          is Not Unix *" 
+        data-direction="-1" data-speed="0.05">
+        </div>
+      </div>   
+  </div>
+</section>
+ 
+    <style>
+  .cid-u5Fpnb1dWa {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    background-color: var(--dominant-color, #260a30);
+  }
+
+  .cid-u5Fpnb1dWa input {
+    padding: 1.2rem 1.5rem;
+    border: none !important;
+    height: 100%;
+  }
+
+  .cid-u5Fpnb1dWa input:hover {
+    border: none !important;
+  }
+
+  .cid-u5Fpnb1dWa .btn {
+    height: 100%;
+    margin: auto;
+  }
+
+  @media (min-width: 992px) {
+    .cid-u5Fpnb1dWa .text-wrapper {
+      padding: 0 2rem;
+    }
+  }
+
+  .cid-u5Fpnb1dWa .row {
+    justify-content: center;
+  }
+
+  .cid-u5Fpnb1dWa .mbr-section-btn {
+    display: flex;
+    margin-bottom: 1.2rem;
+    width: fit-content;
+  }
+
+  @media (min-width: 768px) {
+    .cid-u5Fpnb1dWa .mbr-section-btn {
+      margin-left: initial;
+    }
+  }
+
+  .cid-u5Fpnb1dWa .mbr-section-btn .btn {
+    width: auto;
+  }
+
+  @media (max-width: 991px) {
+    .cid-u5Fpnb1dWa .image-wrapper {
+      margin-bottom: 2rem;
+    }
+
+    .cid-u5Fpnb1dWa .content-wrapper {
+      flex-direction: column-reverse;
+    }
+  }
+
+  .cid-u5Fpnb1dWa .justify-content-center {
+    align-items: center;
+  }
+
+  .cid-u5Fpnb1dWa .mbr-section-title {
+    text-align: center;
+    color: var(--dominant-text, #ffd7ef);
+  }
+</style>
+    <style>
+  .cid-u5Fpnb1hy4 {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    background-color: transparent;
+  }
+  .cid-u5Fpnb1hy4 .mbr-iconfont {
+    font-size: 1.2rem !important;
+    font-family: 'Moririse2' !important;
+    color: white;
+    transition: all 0.3s;
+    transform: rotate(180deg);
+  }
+  .cid-u5Fpnb1hy4 .panel-group {
+    border: none;
+  }
+  .cid-u5Fpnb1hy4 .card-header {
+    padding: 1.2rem 0.5rem;
+  }
+  @media (max-width: 767px) {
+    .cid-u5Fpnb1hy4 .card-header {
+      padding: 1rem 0rem;
+    }
+  }
+  .cid-u5Fpnb1hy4 .panel-body {
+    padding: 0 0.5rem;
+    padding-bottom: 1rem;
+  }
+  @media (max-width: 767px) {
+    .cid-u5Fpnb1hy4 .panel-body {
+      padding: 0rem;
+      padding-bottom: 1rem;
+    }
+  }
+  .cid-u5Fpnb1hy4 .img-col {
+    padding: 0;
+  }
+  .cid-u5Fpnb1hy4 .img-item {
+    height: 100%;
+  }
+  .cid-u5Fpnb1hy4 img {
+    height: 100%;
+    object-fit: cover;
+  }
+  .cid-u5Fpnb1hy4 .collapsed span {
+    transform: rotate(0deg);
+  }
+  .cid-u5Fpnb1hy4 .panel-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .cid-u5Fpnb1hy4 p {
+    margin-bottom: 0.3rem;
+  }
+  .cid-u5Fpnb1hy4 .card .card-header {
+    background-color: transparent;
+    margin-bottom: 0;
+    border: 0;
+    border-radius: 2rem;
+  }
+  .cid-u5Fpnb1hy4 .card {
+    background: #ffffff;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+  }
+  @media (max-width: 767px) {
+    .cid-u5Fpnb1hy4 .card {
+      padding: 1.5rem;
+    }
+  }
+  .cid-u5Fpnb1hy4 .panel-text {
+    color: #000000;
+  }
+  .cid-u5Fpnb1hy4 .mbr-section-title {
+    text-align: center;
+    color: #000000;
+  }
+  .cid-u5Fpnb1hy4 .mbr-section-subtitle {
+    color: #000000;
+    text-align: center;
+  }
+  .cid-u5Fpnb1hy4 .panel-title-edit,
+  .cid-u5Fpnb1hy4 .mbr-iconfont {
+    color: #000000;
+  }
+</style>
+
+
+<section class="header14 cid-u5Fpnb2jLS mbr-parallax-background" id="call-to-action-9-u5Fpnb2jLS">
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="card col-12 col-md-12 col-lg-10">
+				<div class="card-wrapper">
+					<div class="card-box align-center">
+						<h1 class="card-title mbr-fonts-style mb-4 display-1">
+							<strong>FIRST PRESENTATION BLOCK</strong>
+						</h1>
+						<p class="mbr-text mbr-fonts-style mb-4 display-7">
+							Perhaps remove the button - or find a good reason to use it
+                        </p>
+						<div class="mbr-section-btn mt-4">
+                            <a class="btn btn-primary display-7" href="#">Start Learning</a>
+                        </div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="list1 cid-u5Fpnb1hy4" id="faq-1-u5Fpnb1hy4">
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-12 col-md-12 col-lg-10 m-auto">
+				<div class="content">
+					<div class="mbr-section-head align-left mb-5">
+						<h3 class="mbr-section-title mb-2 mbr-fonts-style display-2">
+							<strong>Presentation 1 Block</strong>
+						</h3>
+					</div>
+					<div id="bootstrap-accordion_0" class="panel-group accordionStyles accordion" role="tablist" aria-multiselectable="true">
+						<div class="card mb-3">
+							<div class="card-header" role="tab" id="headingOne">
+								<a role="button" class="panel-title collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-core="" href="#collapse1_0" aria-expanded="false" aria-controls="collapse1">
+									<h6 class="panel-title-edit mbr-semibold mbr-fonts-style mb-0 display-5">
+										What&#x27;s GNU Debugger?
+									</h6>
+									<span class="sign mbr-iconfont mobi-mbri-arrow-down"></span>
+								</a>
+							</div>
+							<div id="collapse1_0" class="panel-collapse noScroll collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion" data-bs-parent="#bootstrap-accordion_0">
+								<div class="panel-body">
+									<p class="mbr-fonts-style panel-text display-7">
+										Discover the magic behind GNU Debugger and how it unveils the secrets of your code.
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="card mb-3">
+							<div class="card-header" role="tab" id="headingOne">
+								<a role="button" class="panel-title collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-core="" href="#collapse2_0" aria-expanded="false" aria-controls="collapse2">
+									<h6 class="panel-title-edit mbr-semibold mbr-fonts-style mb-0 display-5">
+										Why Linux Matters?
+									</h6>
+									<span class="sign mbr-iconfont mobi-mbri-arrow-down"></span>
+								</a>
+							</div>
+							<div id="collapse2_0" class="panel-collapse noScroll collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion" data-bs-parent="#bootstrap-accordion_0">
+								<div class="panel-body">
+									<p class="mbr-fonts-style panel-text display-7">
+										Dive into the world of Linux and understand why it&#x27;s the powerhouse for system programming.
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="card mb-3">
+							<div class="card-header" role="tab" id="headingOne">
+								<a role="button" class="panel-title collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-core="" href="#collapse3_0" aria-expanded="false" aria-controls="collapse3">
+									<h6 class="panel-title-edit mbr-semibold mbr-fonts-style mb-0 display-5">
+										
+									</h6>
+									<span class="sign mbr-iconfont mobi-mbri-arrow-down"></span>
+								</a>
+							</div>
+							<div id="collapse3_0" class="panel-collapse noScroll collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion" data-bs-parent="#bootstrap-accordion_0">
+								<div class="panel-body">
+									<p class="mbr-fonts-style panel-text display-7">
+										
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="card mb-3">
+							<div class="card-header" role="tab" id="headingOne">
+								<a role="button" class="panel-title collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-core="" href="#collapse4_0" aria-expanded="false" aria-controls="collapse4">
+									<h6 class="panel-title-edit mbr-semibold mbr-fonts-style mb-0 display-5">
+										
+									</h6>
+									<span class="sign mbr-iconfont mobi-mbri-arrow-down"></span>
+								</a>
+							</div>
+							<div id="collapse4_0" class="panel-collapse noScroll collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion" data-bs-parent="#bootstrap-accordion_0">
+								<div class="panel-body">
+									<p class="mbr-fonts-style panel-text display-7">
+										
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="card mb-3">
+							<div class="card-header" role="tab" id="headingOne">
+								<a role="button" class="panel-title collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-core="" href="#collapse5_0" aria-expanded="false" aria-controls="collapse5">
+									<h6 class="panel-title-edit mbr-semibold mbr-fonts-style mb-0 display-5">
+										
+									</h6>
+									<span class="sign mbr-iconfont mobi-mbri-arrow-down"></span>
+								</a>
+							</div>
+							<div id="collapse5_0" class="panel-collapse noScroll collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion" data-bs-parent="#bootstrap-accordion_0">
+								<div class="panel-body">
+									<p class="mbr-fonts-style panel-text display-7">
+										
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="blog-2 cid-u5Fpnb2tFi" id="blog-2-u5Fpnb2tFi">
+  <div class="container-fluid">
+      <div class="row justify-content-center mb-5">
+          <div class="col-12 content-head">
+              <div class="mbr-section-head">
+                  <h4 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2">
+                      <strong>Links and useful stuff - these are links</strong>
+                  </h4>
+              </div>
+          </div>
+      </div>
+      <div class="row">
+          <div class="item features-image col-12 col-md-6 col-lg-3 active">
+              <div class="item-wrapper">
+                  <div class="item-img mb-3">
+                      <img src="assets/images/photo-1488590528505-98d2b5aba04b.jpeg">
+                  </div>
+                  <div class="item-content align-left">
+                      <h5 class="item-title mbr-fonts-style mt-0 mb-3 display-7">
+                          Insights
+                      </h5>
+                      <h6 class="item-subtitle mbr-fonts-style mb-3 display-5">
+                          <strong>Demystifying Debugging</strong>
+                      </h6>
+
+                      <div class="mbr-section-btn item-footer">
+                          <a href="" class="btn item-btn btn-primary display-7">
+                              Read
+                          </a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="item features-image col-12 col-md-6 col-lg-3">
+              <div class="item-wrapper">
+                  <div class="item-img mb-3">
+                      <img src="assets/images/photo-1518770660439-4636190af475.jpeg" data-slide-to="1" data-bs-slide-to="1">
+                  </div>
+                  <div class="item-content align-left">
+                      <h5 class="item-title mbr-fonts-style mb-3 mt-0 display-7">
+                          Tips
+                      </h5>
+                      <h6 class="item-subtitle mbr-fonts-style mb-3 display-5">
+                          <strong>Linux Liberation Guide</strong>
+                      </h6>
+                      <div class="mbr-section-btn item-footer">
+                          <a href="" class="btn item-btn btn-primary display-7">
+                              Read
+                          </a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="item features-image col-12 col-md-6 col-lg-3">
+              <div class="item-wrapper">
+                  <div class="item-img mb-3">
+                      <img src="assets/images/photo-1478432780021-b8d273730d8c.jpeg" data-slide-to="2" data-bs-slide-to="2">
+                  </div>
+                  <div class="item-content align-left">
+                      <h5 class="item-title mbr-fonts-style mb-3 mt-0 display-7">
+                          Tricks
+                      </h5>
+                      <h6 class="item-subtitle mbr-fonts-style mt-0 mb-3 display-5">
+                          <strong>Assembly Alchemy Secrets</strong>
+                      </h6>
+                      <div class="mbr-section-btn item-footer">
+                          <a href="" class="btn item-btn btn-primary display-7">
+                              Read
+                          </a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="item features-image col-12 col-md-6 col-lg-3">
+              <div class="item-wrapper">
+                  <div class="item-img mb-3">
+                      <img src="assets/images/photo-1505740420928-5e560c06d30e.jpeg" data-slide-to="3" data-bs-slide-to="4">
+                  </div>
+                  <div class="item-content align-left">
+                      <h5 class="item-title mbr-fonts-style mb-3 mt-0 display-7">
+                          Hacks
+                      </h5>
+                      <h6 class="item-subtitle mbr-fonts-style mt-0 mb-3 display-5">
+                          <strong>
+                              Code Compilation Chronicles
+                          </strong>
+                      </h6>
+
+                      <div class="mbr-section-btn item-footer">
+                          <a href="" class="btn item-btn btn-primary display-7">
+                              Read
+                          </a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+<section class="image08 cid-u5Fpnb1mKY" id="image-12-u5Fpnb1mKY">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-4">
+        <div class="col-12 col-md-12">
+          <h5 class="mbr-section-title mbr-fonts-style mt-0 mb-4 display-2">
+            <strong>Second Presentation Block</strong>
+          </h5>
+          <h6 class="mbr-section-subtitle mbr-fonts-style mt-0 mb-4 display-7">
+            Dive into the world of virtual debugging with our interactive tool. Unleash your debugging skills!
+          </h6>
+        </div>
+      </div>
+      <div class="col-lg-8 side-features">
+        <div class="image-wrapper mb-4">
+          <img class="w-100" src="assets/images/photo-1597733336794-12d05021d510.jpeg">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="list1 cid-u5Fpnb1hy4" id="faq-1-u5Fpnb1hy4">
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-12 col-md-12 col-lg-10 m-auto">
+				<div class="content">
+					<div class="mbr-section-head align-left mb-5">
+						<h3 class="mbr-section-title mb-2 mbr-fonts-style display-2">
+							<strong>Second Block items</strong>
+						</h3>
+					</div>
+					<div id="bootstrap-accordion_0" class="panel-group accordionStyles accordion" role="tablist" aria-multiselectable="true">
+						<div class="card mb-3">
+							<div class="card-header" role="tab" id="headingOne">
+								<a role="button" class="panel-title collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-core="" href="#collapse1_0" aria-expanded="false" aria-controls="collapse1">
+									<h6 class="panel-title-edit mbr-semibold mbr-fonts-style mb-0 display-5">
+										What&#x27;s GNU Debugger?
+									</h6>
+									<span class="sign mbr-iconfont mobi-mbri-arrow-down"></span>
+								</a>
+							</div>
+							<div id="collapse1_0" class="panel-collapse noScroll collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion" data-bs-parent="#bootstrap-accordion_0">
+								<div class="panel-body">
+									<p class="mbr-fonts-style panel-text display-7">
+										Discover the magic behind GNU Debugger and how it unveils the secrets of your code.
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="card mb-3">
+							<div class="card-header" role="tab" id="headingOne">
+								<a role="button" class="panel-title collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-core="" href="#collapse2_0" aria-expanded="false" aria-controls="collapse2">
+									<h6 class="panel-title-edit mbr-semibold mbr-fonts-style mb-0 display-5">
+										Why Linux Matters?
+									</h6>
+									<span class="sign mbr-iconfont mobi-mbri-arrow-down"></span>
+								</a>
+							</div>
+							<div id="collapse2_0" class="panel-collapse noScroll collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion" data-bs-parent="#bootstrap-accordion_0">
+								<div class="panel-body">
+									<p class="mbr-fonts-style panel-text display-7">
+										Dive into the world of Linux and understand why it&#x27;s the powerhouse for system programming.
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="card mb-3">
+							<div class="card-header" role="tab" id="headingOne">
+								<a role="button" class="panel-title collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-core="" href="#collapse3_0" aria-expanded="false" aria-controls="collapse3">
+									<h6 class="panel-title-edit mbr-semibold mbr-fonts-style mb-0 display-5">
+										
+									</h6>
+									<span class="sign mbr-iconfont mobi-mbri-arrow-down"></span>
+								</a>
+							</div>
+							<div id="collapse3_0" class="panel-collapse noScroll collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion" data-bs-parent="#bootstrap-accordion_0">
+								<div class="panel-body">
+									<p class="mbr-fonts-style panel-text display-7">
+										
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="card mb-3">
+							<div class="card-header" role="tab" id="headingOne">
+								<a role="button" class="panel-title collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-core="" href="#collapse4_0" aria-expanded="false" aria-controls="collapse4">
+									<h6 class="panel-title-edit mbr-semibold mbr-fonts-style mb-0 display-5">
+										
+									</h6>
+									<span class="sign mbr-iconfont mobi-mbri-arrow-down"></span>
+								</a>
+							</div>
+							<div id="collapse4_0" class="panel-collapse noScroll collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion" data-bs-parent="#bootstrap-accordion_0">
+								<div class="panel-body">
+									<p class="mbr-fonts-style panel-text display-7">
+										
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="card mb-3">
+							<div class="card-header" role="tab" id="headingOne">
+								<a role="button" class="panel-title collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-core="" href="#collapse5_0" aria-expanded="false" aria-controls="collapse5">
+									<h6 class="panel-title-edit mbr-semibold mbr-fonts-style mb-0 display-5">
+										
+									</h6>
+									<span class="sign mbr-iconfont mobi-mbri-arrow-down"></span>
+								</a>
+							</div>
+							<div id="collapse5_0" class="panel-collapse noScroll collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion" data-bs-parent="#bootstrap-accordion_0">
+								<div class="panel-body">
+									<p class="mbr-fonts-style panel-text display-7">
+										
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="features03 cid-u5Fpnb2rtF" id="events-1-u5Fpnb2rtF">
+	<div class="container-fluid">
+		<div class="row justify-content-center mb-5">
+			<div class="col-12 content-head">
+				<div class="mbr-section-head">
+					<h4 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2">
+						<strong>Links and readings for the second block</strong>
+					</h4>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="item features-image col-12 col-md-6 col-lg-3 active">
+				<div class="item-wrapper">
+					<div class="item-img mb-3">
+						<img src="assets/images/photo-1478432780021-b8d273730d8c.jpeg">
+					</div>
+					<div class="item-content align-left">
+						<h6 class="item-subtitle mbr-fonts-style mb-3 display-5">
+							<strong><a class="text-black fw-bold" href="#">Code Crafting Workshop</a></strong>
+						</h6>
+						<p class="mbr-text mbr-fonts-style mb-3 display-7">March 15, 2024</p>
+						<p class="mbr-text mbr-fonts-style mb-3 display-7">Join our interactive workshop to hone your coding skills and delve into the art of code crafting.</p>
+						<div class="mbr-section-btn item-footer"><a href="#" class="btn item-btn btn-primary display-7">Join1</a></div>
+					</div>
+				</div>
+			</div>
+			<div class="item features-image col-12 col-md-6 col-lg-3">
+				<div class="item-wrapper">
+					<div class="item-img mb-3">
+						<img src="assets/images/photo-1461749280684-dccba630e2f6.jpeg" data-slide-to="1" data-bs-slide-to="1">
+					</div>
+					<div class="item-content align-left">
+						<h6 class="item-subtitle mbr-fonts-style mb-3 display-5">
+							<strong><a class="text-black fw-bold" href="#">Debugging Deep Dive</a></strong>
+						</h6>
+						<p class="mbr-text mbr-fonts-style mb-3 display-7">April 5, 2024</p>
+						<p class="mbr-text mbr-fonts-style mb-3 display-7">Explore the depths of debugging techniques with experts in our immersive deep dive session.</p>
+						<div class="mbr-section-btn item-footer"><a href="#" class="btn item-btn btn-primary display-7">Join2</a></div>
+					</div>
+				</div>
+			</div>
+			<div class="item features-image col-12 col-md-6 col-lg-3">
+				<div class="item-wrapper">
+					<div class="item-img mb-3">
+						<img src="assets/images/photo-1451187580459-43490279c0fa.jpeg" data-slide-to="2" data-bs-slide-to="2">
+					</div>
+					<div class="item-content align-left">
+						<h6 class="item-subtitle mbr-fonts-style mt-0 mb-3 display-5">
+							<strong><a class="text-black fw-bold" href="#">Linux Legends Live</a></strong>
+						</h6>
+						<p class="mbr-text mbr-fonts-style mb-3 display-7">April 20, 2024</p>
+						<p class="mbr-text mbr-fonts-style mb-3 display-7">Meet the Linux legends in a live session and uncover the secrets of this powerful operating system.</p>
+						<div class="mbr-section-btn item-footer"><a href="#" class="btn item-btn btn-primary display-7">Join</a></div>
+					</div>
+				</div>
+			</div>
+			<div class="item features-image col-12 col-md-6 col-lg-3">
+				<div class="item-wrapper">
+					<div class="item-img mb-3">
+						<img src="assets/images/photo-1496065187959-7f07b8353c55.jpeg" data-slide-to="3" data-bs-slide-to="3">
+					</div>
+					<div class="item-content align-left">
+						<h6 class="item-subtitle mbr-fonts-style mt-0 mb-3 display-5">
+							<strong><a class="text-black fw-bold" href="#">Assembly Adventure</a></strong>
+						</h6>
+						<p class="mbr-text mbr-fonts-style mb-3 display-7">May 10, 2024</p>
+						<p class="mbr-text mbr-fonts-style mb-3 display-7">Embark on an assembly adventure to discover the beauty and complexity of low-level programming.</p>
+						<div class="mbr-section-btn item-footer"><a href="#" class="btn item-btn btn-primary display-7">Join</a></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+    <style>
+    .cid-u5Fpnb2jge {
+        padding-top: 5rem;
+        padding-bottom: 3rem;
+        background-color: transparent;
+    }
+
+    .cid-u5Fpnb2jge .mbr-fallback-image.disabled {
+        display: none;
+    }
+
+    .cid-u5Fpnb2jge .mbr-fallback-image {
+        display: block;
+        background-size: cover;
+        background-position: center center;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+    }
+
+    .cid-u5Fpnb2jge .item-mb {
+        margin-bottom: 2rem;
+    }
+
+    @media (max-width: 767px) {
+        .cid-u5Fpnb2jge .item-mb {
+            margin-bottom: 1rem;
+        }
+    }
+
+    .cid-u5Fpnb2jge .item-wrapper {
+        background: #ffffff;
+        padding: 2.25rem;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    @media (min-width: 992px) and (max-width: 1200px) {
+        .cid-u5Fpnb2jge .item-wrapper {
+            padding: 2rem 1.5rem;
+            margin-bottom: 0rem;
+        }
+    }
+
+    @media (max-width: 767px) {
+        .cid-u5Fpnb2jge .item-wrapper {
+            padding: 2rem 1.5rem;
+            margin-bottom: 1rem;
+        }
+    }
+
+    .cid-u5Fpnb2jge .mbr-section-title {
+        color: #000000;
+    }
+
+    .cid-u5Fpnb2jge .mbr-section-subtitle {
+        color: #000000;
+    }
+
+    .cid-u5Fpnb2jge .card-box {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    .cid-u5Fpnb2jge .card-box .item-footer {
+        margin-top: auto;
+    }
+
+    .cid-u5Fpnb2jge .content-head {
+        max-width: 800px;
+    }
+
+    .cid-u5Fpnb2jge .card-title,
+    .cid-u5Fpnb2jge .iconfont-wrapper {
+        text-align: center;
+    }
+
+    .cid-u5Fpnb2jge .card-text,
+    .cid-u5Fpnb2jge .item .mbr-section-btn {
+        text-align: center;
+    }
+</style>
+
+    <style>
+    .cid-u5Fpnb2tFi {
+        padding-top: 5rem;
+        padding-bottom: 3rem;
+        background-color: #ffffff;
+    }
+
+    .cid-u5Fpnb2tFi .item-subtitle {
+        line-height: 1.2;
+        color: #000000;
+    }
+
+    .cid-u5Fpnb2tFi img,
+    .cid-u5Fpnb2tFi .item-img {
+        width: 100%;
+        height: 100%;
+        height: 300px;
+        object-fit: cover;
+    }
+
+    .cid-u5Fpnb2tFi .item:focus,
+    .cid-u5Fpnb2tFi span:focus {
+        outline: none;
+    }
+
+    .cid-u5Fpnb2tFi .item {
+        margin-bottom: 2rem;
+    }
+
+    @media (max-width: 767px) {
+        .cid-u5Fpnb2tFi .item {
+            margin-bottom: 1rem;
+        }
+    }
+
+    .cid-u5Fpnb2tFi .item-wrapper {
+        position: relative;
+        border-radius: 4px;
+        height: 100%;
+        display: flex;
+        flex-flow: column nowrap;
+    }
+
+    .cid-u5Fpnb2tFi .mbr-section-title {
+        color: #000000;
+    }
+
+    .cid-u5Fpnb2tFi .mbr-text,
+    .cid-u5Fpnb2tFi .mbr-section-btn {
+        color: #000000;
+    }
+
+    .cid-u5Fpnb2tFi .item-title {
+        color: #000000;
+    }
+
+    .cid-u5Fpnb2tFi .content-head {
+        max-width: 800px;
+    }
+</style>
+
+
+
+    <style>
+    .cid-u5Fpnb2jLS {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+        background-image: url("assets/images/photo-1526374965328-7f61d4dc18c5.jpeg")
+    }
+
+    .cid-u5Fpnb2jLS .mbr-fallback-image.disabled {
+        display: none;
+    }
+
+    .cid-u5Fpnb2jLS .mbr-fallback-image {
+        display: block;
+        background-size: cover;
+        background-position: center center;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+    }
+
+    .cid-u5Fpnb2jLS .card-wrapper {
+        background: #ffffff;
+    }
+
+    @media (max-width: 767px) {
+        .cid-u5Fpnb2jLS .card-wrapper {
+            padding: 2rem 1.5rem;
+            margin-bottom: 1rem;
+        }
+    }
+
+    @media (min-width: 768px) and (max-width: 991px) {
+        .cid-u5Fpnb2jLS .card-wrapper {
+            padding: 2.25rem;
+        }
+    }
+
+    @media (min-width: 992px) {
+        .cid-u5Fpnb2jLS .card-wrapper {
+            padding: 4rem;
+        }
+    }
+
+    .cid-u5Fpnb2jLS .mbr-text,
+    .cid-u5Fpnb2jLS .mbr-section-btn {
+        text-align: center;
+    }
+</style>
+
+
+    <style>
+  .cid-u5Fpnb2rtF {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    background-color: #ffffff;
+  }
+  .cid-u5Fpnb2rtF .item-subtitle {
+    line-height: 1.2;
+    color: #000000;
+  }
+  .cid-u5Fpnb2rtF img,
+  .cid-u5Fpnb2rtF .item-img {
+    width: 100%;
+    height: 100%;
+    height: 400px;
+    object-fit: cover;
+  }
+  .cid-u5Fpnb2rtF .item:focus,
+  .cid-u5Fpnb2rtF span:focus {
+    outline: none;
+  }
+  .cid-u5Fpnb2rtF .item {
+    margin-bottom: 2rem;
+  }
+  @media (max-width: 767px) {
+    .cid-u5Fpnb2rtF .item {
+      margin-bottom: 1rem;
+    }
+  }
+  .cid-u5Fpnb2rtF .item-wrapper {
+    position: relative;
+    border-radius: 4px;
+    height: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+  }
+  .cid-u5Fpnb2rtF .mbr-section-title {
+    color: #232323;
+  }
+  .cid-u5Fpnb2rtF .mbr-text,
+  .cid-u5Fpnb2rtF .mbr-section-btn {
+    color: #232323;
+  }
+  .cid-u5Fpnb2rtF .item-title {
+    color: #232323;
+  }
+  .cid-u5Fpnb2rtF .content-head {
+    max-width: 800px;
+  }
+</style>
+
+
+    <style>
+.cid-u5Fpnb2cuC {
+  overflow: hidden;
+  background-image: url("assets/images/photo-1504384764586-bb4cdc1707b0.jpeg");
+}
+</style>
+<section class="image02 cid-u5Fpnb2cuC mbr-fullscreen mbr-parallax-background" id="image-13-u5Fpnb2cuC">
+    <div class="container">
+        <div class="row"></div>
+    </div>
+</section>
+    <style>
+.cid-u5Fpnb2GF0 {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  background-color: #ffffff;
+}
+.cid-u5Fpnb2GF0 .social-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.cid-u5Fpnb2GF0 .social-row .soc-item {
+  margin: 8px;
+}
+.cid-u5Fpnb2GF0 .social-row .soc-item a:hover .mbr-iconfont,
+.cid-u5Fpnb2GF0 .social-row .soc-item a:focus .mbr-iconfont {
+  background-color: #f7f7f7;
+}
+.cid-u5Fpnb2GF0 .social-row .soc-item a .mbr-iconfont {
+  width: 72px;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  font-size: 32px;
+  background-color: #f7f7f7;
+  color: var(--primary-color, #393193);
+  transition: all 0.3s ease-in-out;
+}
+.cid-u5Fpnb2GF0 .row-links {
+  width: 100%;
+  justify-content: center;
+}
+.cid-u5Fpnb2GF0 .mbr-section-title {
+  color: #ffffff;
+}
+.cid-u5Fpnb2GF0 .mbr-section-title,
+.cid-u5Fpnb2GF0 .social-list {
+  color: #000000;
+}
+
+</style>
+
+<section class="header2 cid-u5Fpnb1dWa" id="subscription-form-1-u5Fpnb1dWa">
+  <div class="container">
+    <div class="row content-wrapper justify-content-center">
+      <div class="col-lg-8 mbr-form">
+        <section class="form5 cid-u5Fpnb28JU" id="contact-form-2-u5Fpnb28JU">
+          <div class="container">
+              <div class="row justify-content-center">
+                  <div class="col-12 content-head">
+                      <div class="mbr-section-head mb-5">
+                          <h3 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2">
+                              <strong>Get in Touch with Us</strong>
+                              <!-- DEBUG: WE NEED A MAIL SERVER WORKING!-->
+                          </h3>                    
+                      </div>
+                  </div>
+              </div>
+              <div class="row justify-content-center">
+                  <div class="col-lg-8 mx-auto mbr-form" data-form-type="formoid">
+                    <form action="assets/emailContact.php" method="POST" class="mbr-form form-with-styler" data-form-title="Form Name">
+                          <div class="row">
+                              <div hidden="hidden" data-form-alert="" class="alert alert-success col-12">Thanks for filling out the form!</div>
+                              <div hidden="hidden" data-form-alert-danger="" class="alert alert-danger col-12">
+                                  Oops...! some problem!
+                              </div>
+                          </div>
+                          <div class="dragArea row">
+                              <div class="col-md col-sm-12 form-group mb-3" data-for="name">
+                                  <input type="text" name="name" placeholder="Name" data-form-field="name" class="form-control" value="" id="name-form02-0">
+                              </div>
+                              <div class="col-md col-sm-12 form-group mb-3" data-for="email">
+                                  <input type="email" name="email" placeholder="Email" data-form-field="email" class="form-control" value="" id="email-form02-0">
+                              </div>
+                              <div class="col-12 form-group mb-3" data-for="textarea">
+                                  <textarea name="textarea" placeholder="Message" data-form-field="textarea" class="form-control" id="textarea-form02-0"></textarea>
+                              </div>
+                              <div class="col-lg-12 col-md-12 col-sm-12 align-center mbr-section-btn"><button type="submit" class="btn btn-primary display-7">Send</button></div>
+                          </div>
+                      </form>
+                  </div>
+              </div>
+          </div>
+      </section>
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="social05 cid-u5Fpnb2GF0" id="follow-us-2-u5Fpnb2GF0">
+    <div class="container">
+        <div class="row">
+            <h3 class="mbr-section-title align-center mb-5 mbr-fonts-style display-2">
+                <strong>Join Our Linux Revolution</strong>
+            </h3>
+            <div class="col-12">
+                <div class="social-row">
+                    <div class="soc-item">
+                        <a href="#" target="_blank">
+                            <span class="mbr-iconfont socicon socicon-facebook"></span>
+                        </a>
+                    </div>
+                    <div class="soc-item">
+                        <a href="#" target="_blank">
+                            <span class="mbr-iconfont socicon-twitter socicon"></span>
+                        </a>
+                    </div>
+                    <div class="soc-item">
+                        <a href="#" target="_blank">
+                            <span class="mbr-iconfont socicon-instagram socicon"></span>
+                        </a>
+                    </div>
+                    <div class="soc-item">
+                        <a href="#" target="_blank">
+                            <span class="mbr-iconfont socicon socicon-linkedin"></span>
+                        </a>
+                    </div>
+                    <div class="soc-item">
+                        <a href="#" target="_blank">
+                            <span class="mbr-iconfont socicon socicon-twitch"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    <style>
+.cid-u5Fpnb28JU {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  background-color: transparent;
+}
+.cid-u5Fpnb28JU .mbr-overlay {
+  background-color: #ffffff;
+  opacity: 0.4;
+}
+.cid-u5Fpnb28JU form .mbr-section-btn {
+  text-align: center;
+  width: 100%;
+}
+.cid-u5Fpnb28JU form .mbr-section-btn .btn {
+  display: inline-flex;
+}
+@media (max-width: 991px) {
+  .cid-u5Fpnb28JU form .mbr-section-btn .btn {
+    width: 100%;
+  }
+}
+.cid-u5Fpnb28JU .content-head {
+  max-width: 800px;
+}
+
+    <style>
+.cid-u5Fpnb37RJ .main_wrapper {
+  position: relative;
+  height: 800px;
+  width: 100%;
+}
+.cid-u5Fpnb37RJ .b_wrapper {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+  pointer-events: none;
+}
+@media (max-width: 991px) {
+  .cid-u5Fpnb37RJ .b_wrapper {
+    position: relative;
+    width: 100%;
+    height: auto !important;
+    flex-direction: column;
+  }
+}
+.cid-u5Fpnb37RJ .row {
+  margin: 0;
+}
+@media (max-width: 991px) {
+  .cid-u5Fpnb37RJ .container-fluid {
+    padding: 0;
+  }
+}
+.cid-u5Fpnb37RJ .item-wrapper {
+  height: 100%;
+  background-color: #ffffff;
+  pointer-events: fill;
+  padding: 2.25rem;
+}
+@media (min-width: 992px) and (max-width: 1200px) {
+  .cid-u5Fpnb37RJ .item-wrapper {
+    padding: 1.5rem;
+  }
+}
+@media (max-width: 991px) {
+  .cid-u5Fpnb37RJ .item-wrapper {
+    width: 100%;
+    position: relative;
+    padding: 2rem;
+    border-radius: 0px !important;
+  }
+}
+.cid-u5Fpnb37RJ .google-map {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+}
+.cid-u5Fpnb37RJ .google-map iframe {
+  height: 100%;
+  width: 100%;
+  border-radius: 0px !important;
+}
+.cid-u5Fpnb37RJ .google-map [data-state-details] {
+  color: #edefeb;
+  height: 1.5em;
+  margin-top: -0.75em;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  width: 100%;
+}
+.cid-u5Fpnb37RJ .google-map[data-state] {
+  background: #edefeb;
+}
+.cid-u5Fpnb37RJ .google-map[data-state="loading"] [data-state-details] {
+  display: none;
+}
+@media (max-width: 991px) {
+  .cid-u5Fpnb37RJ .google-map {
+    position: static;
+  }
+}
+.cid-u5Fpnb37RJ ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+</style>
+<section class="contacts4 map1 cid-u5Fpnb37RJ" id="contacts-3-u5Fpnb37RJ">
+	<div class="main_wrapper">
+		<div class="b_wrapper">
+			<div class="container-fluid">
+				<div class="row justify-content-start">
+					<div class="col-md-5 col-lg-4 item-wrapper">
+            <h5 class="cardTitle mbr-fonts-style mb-2 display-5">
+                <strong>Contact Us</strong>
+            </h5>
+            <ul class="list mbr-fonts-style display-7">
+              <li class="mbr-text item-wrap">Phone: <a href="tel:+1-800-123-4567" class="text-black">+1-800-123-4567</a></li>
+              <li class="mbr-text item-wrap">WhatsApp: <a href="tel:+1-800-123-4567" class="text-black">+1-800-123-4567</a></li>
+              <li class="mbr-text item-wrap">Email: <a href="mailto:info@systemsgenius.com" class="text-black">info@systemsgenius.com</a></li>
+              <li class="mbr-text item-wrap">Address: Porto Portugal</li>
+              <li class="mbr-text item-wrap">Working Hours: Mon-Fri: 9am-6pm</li>
+            </ul>
+					</div>
+				</div>
+			</div>
+		</div>
+        <div class="google-map"><iframe frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key&#x3D;AIzaSyCt1265A4qvZy9HKUeA8J15AOC4SrCyZe4&amp;q&#x3D;Porto%20Portugal" allowfullscreen=""></iframe></div>
+	</div>
+</section>
+    <style>
+.cid-u5Fpnb3byU {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  background-color: #000000;
+}
+.cid-u5Fpnb3byU .mbr-fallback-image.disabled {
+  display: none;
+}
+.cid-u5Fpnb3byU .mbr-fallback-image {
+  display: block;
+  background-size: cover;
+  background-position: center center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+}
+.cid-u5Fpnb3byU .copyright {
+  color: #ffffff;
+  text-align: left;
+}
+.cid-u5Fpnb3byU .center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+@media (max-width: 991px) {
+  .cid-u5Fpnb3byU .row {
+    flex-direction: column-reverse !important;
+  }
+  .cid-u5Fpnb3byU .row .copyright {
+    margin: 1rem 0 0 0;
+  }
+}
+.cid-u5Fpnb3byU .row-links {
+  width: 100%;
+  justify-content: center;
+}
+.cid-u5Fpnb3byU .row-links .row-links-soc {
+  list-style: none;
+  display: flex;
+  justify-content: right;
+  flex-wrap: wrap;
+  padding: 0;
+  margin-bottom: 0;
+}
+@media (max-width: 991px) {
+  .cid-u5Fpnb3byU .row-links .row-links-soc {
+    justify-content: center;
+  }
+}
+.cid-u5Fpnb3byU .row-links .row-links-soc li {
+  padding: 0 1rem 0rem 1rem;
+}
+@media (max-width: 767px) {
+  .cid-u5Fpnb3byU .row-links .row-links-soc li {
+    padding: 0 1rem 1rem 1rem;
+  }
+}
+.cid-u5Fpnb3byU .row-links .row-links-soc li p {
+  margin: 0;
+}
+@media (max-width: 991px) {
+  .cid-u5Fpnb3byU .copyright {
+    text-align: center;
+  }
+}
+</style>
+<section class="footer2 cid-u5Fpnb3byU" id="footer-5-u5Fpnb3byU">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-lg-6 center mt-2 mb-3">
+        <p class="mbr-fonts-style copyright mb-0 display-7">
+          © 2024 Systems Genius. All Rights Reserved.
+        </p>
+      </div>
+      <div class="col-12 col-lg-6 center">
+        <div class="row-links mt-2 mb-3">
+          <ul class="row-links-soc">
+            <li class="row-links-soc-item mbr-fonts-style display-7">
+              <a href="#" class="text-white">About</a>
+            </li>
+            <li class="row-links-soc-item mbr-fonts-style display-7">
+              <a href="#" class="text-white">Services</a>
+            </li>
+            <li class="row-links-soc-item mbr-fonts-style display-7">
+              <a href="#" class="text-white">Blog</a>
+            </li>
+            <li class="row-links-soc-item mbr-fonts-style display-7">
+              <a href="#" class="text-white">Careers</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script src="assets/parallax/jarallax.js"></script>
+  <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/dropdown/js/navbar-dropdown.js"></script>
+  <script src="assets/embla/embla.min.js"></script>
+  <script src="assets/embla/script.js"></script>
+  <script src="assets/scrollgallery/scroll-gallery.js"></script>
+  <script src="assets/mbr-switch-arrow/mbr-switch-arrow.js"></script>
+  <script src="assets/smoothscroll/smooth-scroll.js"></script>
+  <script src="assets/ytplayer/index.js"></script>
+  <script src="assets/theme/js/script.js"></script>
+  <script src="assets/formoid/formoid.min.js"></script>
+  
+  <script>
+
+    (function(){
+      var animationInput = document.createElement('input');
+      animationInput.setAttribute('name', 'animation');
+      animationInput.setAttribute('type', 'hidden');
+      document.body.append(animationInput);
+    })();
+
+  </script>
+</body>
+</html>

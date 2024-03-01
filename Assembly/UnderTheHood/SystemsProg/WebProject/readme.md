@@ -38,3 +38,17 @@ Other possible avenues to explore (if I have the time for it):
 
 data structures, pointers and memory management, gile I/O, debugging techniques, potimization techniques, concurrency and parallelism, security
 Added a folder for docs which are sketch-ready. These only need a little work to be sent to the webpage
+
+--snip--
+
+Fri  1 Mar 18:36:53 WET 2024
+
+Added the current index.html.
+
+Built it from a complex AI template. Started changing it a couple of days ago. Still needs a lot of work.
+If possible, I'd rather spend as little time as possible in stuff like css and html, which I find remarkably boring.
+
+So, hooray for AI, I guess.
+
+--snip--
+
