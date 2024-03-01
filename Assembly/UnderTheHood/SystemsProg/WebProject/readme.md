@@ -52,3 +52,5 @@ So, hooray for AI, I guess.
 
 --snip--
 
+Note: I need to add more gifs - that are adequate to the division I have in the project.
+Also check for the text length - or make proper boxes to hold text (easy to read, etc).
