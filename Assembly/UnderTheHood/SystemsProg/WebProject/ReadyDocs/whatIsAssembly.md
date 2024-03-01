@@ -1,4 +1,4 @@
-Assembly serves as a human-readable abstraction of machine code, enabling programmers to write code without delving into the binary representation of instructions.
+Assembly is a low-level programming language that serves as a human-readable abstraction of machine code, enabling programmers to write code without delving into the binary representation of instructions.
 
 Despite the development of higher-level programming languages with increased levels of abstraction, Assembly remains relevant today for tackling low-level challenges such as optimizing performance or accessing hardware directly (in embedded systems programming or in writing device drivers, as examples), and malware analyzis.
 
