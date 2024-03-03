@@ -54,3 +54,9 @@ So, hooray for AI, I guess.
 
 Note: I need to add more gifs - that are adequate to the division I have in the project.
 Also check for the text length - or make proper boxes to hold text (easy to read, etc).
+ 
+Sun  3 Mar 16:40:03 WET 2024
+Nearly finished with the basic webpage. Still need to set up the rest to make it work
+ 
+--snip--
+ 
