@@ -72,4 +72,9 @@ Need to finish connections and create a mailserver(!)
 
 --snip--
 
+Locked users out of assets folder with htaccess
+![Closed Assets Folder](imgs/htaccess.png)
+
+--snip--
+
 
