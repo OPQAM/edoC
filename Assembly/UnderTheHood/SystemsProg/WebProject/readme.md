@@ -59,4 +59,7 @@ Sun  3 Mar 16:40:03 WET 2024
 Nearly finished with the basic webpage. Still need to set up the rest to make it work
  
 --snip--
- 
+
+Added a webpage folder to keep index.html isolated. That folder will connect to the webserver in the cloud. Any changes to the webserver will be updated there as well. Will also add my other windows machine to the fold.
+
+--snip--
