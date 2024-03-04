@@ -109,3 +109,9 @@ Locked users out of assets folder with htaccess
 --snip--
 
 Noticed issue in html code: opening of scrolldowns is mirrowed between the Assembly and Compiling sections. There's a good reason for it as well, since they are basically clones of each other. Will take a look into it now.
+
+Found the issue. Changing href="#collapse1_0" to 5_0 and then changing just below theid="collapse1_0" to 5_0, and doing the same for the next 3 entries. This makes them unique.
+Since I have the site offline (or rather, and for now, a slightly older version of it) I can easily test out code and then push changes to the cloud. Sorted.
+
+-- snip --
+
