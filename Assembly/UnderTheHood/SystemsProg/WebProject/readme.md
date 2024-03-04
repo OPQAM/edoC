@@ -54,8 +54,8 @@ So, hooray for AI, I guess.
 
 --snip--
 
-Note: I need to add more gifs - that are adequate to the division I have in the project.
-Also check for the text length - or make proper boxes to hold text (easy to read, etc).
+Note: I need to add more gifs - that are adequate to my project's logic and layout.
+Also check for the text length - or make proper boxes to hold text (easy to read, etc). Will need some extra thinking in this regard.
  
 Sun  3 Mar 16:40:03 WET 2024
 Nearly finished with the basic webpage. Still need to set up the rest to make it work
@@ -68,9 +68,9 @@ Added a webpage folder to keep index.html isolated. That folder will connect to 
 
 Mon  4 Mar 00:35:39 WET 2024
 
-Minor changes to index.html (not visible yet). Cloud not linked to github, yet. Corrected some text.
+Minor changes to index.html (not visible yet). Cloud not linked to github, yet. Corrected some text typos.
 
-Need to finish connections and create a mailserver(!)
+Need to finish connections and create a mailserver (for requests and messages - this is the one part of the website that is not functional).
 
 --snip--
 
@@ -79,4 +79,14 @@ Locked users out of assets folder with htaccess
 
 --snip--
 
+**To Do:**
 
+**- Mailserver
+- Multiple Gits pointing towards the same folder
+- Ready to use .md files need gifs or proper places to be added
+- Re-organize the Assembly and Compilation segments. Join them up.
+- Mobile Optimization (responsive web design). Later Alig8tor.
+- Add more content; develop YT content; add to site; other media sites.
+(Like Mithreas said, "it's work").**
+
+--snip--
