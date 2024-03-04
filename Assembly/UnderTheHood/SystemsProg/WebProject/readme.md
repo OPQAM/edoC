@@ -21,6 +21,8 @@ Need to take care of basic security needs.
 
 This is being done on a tight schedule.
 
+![Daily Reminder](imgs/thingstodo.png)
+
 --snip--
 
 Added some more text to the gnu file - explaining simple commands that we can do with the gdb.
