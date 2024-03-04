@@ -21,7 +21,7 @@ Need to take care of basic security needs.
 
 This is being done on a tight schedule.
 
-![Daily Reminder](imgs/thingstodo.png)
+<img src="imgs/thingstodo.png" alt="daily reminder" width="50%">
 
 --snip--
 
