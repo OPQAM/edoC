@@ -63,3 +63,13 @@ Nearly finished with the basic webpage. Still need to set up the rest to make it
 Added a webpage folder to keep index.html isolated. That folder will connect to the webserver in the cloud. Any changes to the webserver will be updated there as well. Will also add my other windows machine to the fold.
 
 --snip--
+
+Mon  4 Mar 00:35:39 WET 2024
+
+Minor changes to index.html (not visible yet). Cloud not linked to github, yet. Corrected some text.
+
+Need to finish connections and create a mailserver(!)
+
+--snip--
+
+
