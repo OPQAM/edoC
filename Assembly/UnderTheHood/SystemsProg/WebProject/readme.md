@@ -25,6 +25,8 @@ This is being done on a tight schedule.
 
 --snip--
 
+Wed 28 Feb 23:12:22 WET 2024
+
 Added some more text to the gnu file - explaining simple commands that we can do with the gdb.
 
 Need to add another file showcasing what the program is doing from the POV of the debugger
@@ -35,6 +37,8 @@ Also added the file explainingMemoryLeaks.md.
 It's important and relevant to explain a bit more about how memory works, how it can leak and the consequences of that
 
 --snip--
+
+Thu 29 Feb 14:07:43 WET 2024
 
 Other possible avenues to explore (if I have the time for it):
 
@@ -54,6 +58,8 @@ So, hooray for AI, I guess.
 
 --snip--
 
+Sat 2 Feb 12:32:01 WET 2024
+
 Note: I need to add more gifs - that are adequate to my project's logic and layout.
 Also check for the text length - or make proper boxes to hold text (easy to read, etc). Will need some extra thinking in this regard.
  
@@ -62,6 +68,7 @@ Also check for the text length - or make proper boxes to hold text (easy to read
 --snip--
 
 Sun  3 Mar 16:40:03 WET 2024
+
 Nearly finished with the basic webpage. Still need to set up the rest to make it work
  
 --snip--
@@ -100,3 +107,5 @@ Locked users out of assets folder with htaccess
 **(Like Mithreas said, "it's work").**
 
 --snip--
+
+Noticed issue in html code: opening of scrolldowns is mirrowed between the Assembly and Compiling sections. There's a good reason for it as well, since they are basically clones of each other. Will take a look into it now.
