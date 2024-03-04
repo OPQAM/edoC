@@ -82,11 +82,17 @@ Locked users out of assets folder with htaccess
 **To Do:**
 
 **- Mailserver.**
+
 **- Multiple Gits pointing towards the same folder.**
+
 **- Ready to use .md files need gifs or proper places to be added.**
+
 **- Re-organize the Assembly and Compilation segments. Join them up.**
+
 **- Mobile Optimization (responsive web design). Later Alig8tor.**
+
 **- Add more content; develop YT content; add to site; other media sites.**
+
 **(Like Mithreas said, "it's work").**
 
 --snip--
