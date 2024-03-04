@@ -57,6 +57,10 @@ So, hooray for AI, I guess.
 Note: I need to add more gifs - that are adequate to my project's logic and layout.
 Also check for the text length - or make proper boxes to hold text (easy to read, etc). Will need some extra thinking in this regard.
  
+![Example Gif](imgs/helloWorldScript.gif)
+
+--snip--
+
 Sun  3 Mar 16:40:03 WET 2024
 Nearly finished with the basic webpage. Still need to set up the rest to make it work
  
