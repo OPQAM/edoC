@@ -115,3 +115,6 @@ Since I have the site offline (or rather, and for now, a slightly older version 
 
 -- snip --
 
+Had a tossle with the .htaccess file to make sure that the right permissions were set and nothing was broken.
+
+--snip--
