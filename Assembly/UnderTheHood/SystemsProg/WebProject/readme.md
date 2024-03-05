@@ -118,3 +118,19 @@ Since I have the site offline (or rather, and for now, a slightly older version 
 Had a tossle with the .htaccess file to make sure that the right permissions were set and nothing was broken.
 
 --snip--
+
+Tue  5 Mar 17:32:02 WET 2024
+
+Changed the logo to one of my making:
+![New .ico image with size 32x32](imgs/logo.ico)
+
+--snip--
+
+Removed useless pictures that I don't need, uncluttering the server.
+
+Installed Postfix and had my first attempt at validating incoming mail (for site suggestions, etc). Atm, not working. Will check out next friday.
+
+The server is ready to be presented as is. It's more akin to a proof of concept than a proper site. Things need to be reorganized and I need to step up security.
+Only the bare minimum was done.
+
+--snip--
