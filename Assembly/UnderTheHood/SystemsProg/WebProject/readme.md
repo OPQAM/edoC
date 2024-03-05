@@ -137,3 +137,9 @@ The server is ready to be presented as is. It's more akin to a proof of concept 
 Only the bare minimum was done.
 
 --snip--
+
+Git ready and pointing towards an alternative folder inside the cloud (backup).
+
+'Public' presentation done. Refer to the previous To-Do's.
+
+--snip--
