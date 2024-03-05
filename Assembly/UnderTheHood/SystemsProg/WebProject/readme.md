@@ -122,6 +122,8 @@ Had a tossle with the .htaccess file to make sure that the right permissions wer
 Tue  5 Mar 17:32:02 WET 2024
 
 Changed the logo to one of my making:
+
+
 ![New .ico image with size 32x32](imgs/logo.png)
 
 --snip--
