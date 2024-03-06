@@ -93,9 +93,9 @@ Locked users out of assets folder with htaccess
 
 **To Do:**
 
-**- Mailserver.**
+**- Mailserver.** - Incomplete
 
-**- Multiple Gits pointing towards the same folder.**
+**- Multiple Gits pointing towards the same folder.** - consider taking better notes
 
 **- Ready to use .md files need gifs or proper places to be added.**
 
@@ -143,3 +143,20 @@ Git ready and pointing towards an alternative folder inside the cloud (backup).
 'Public' presentation done. Refer to the previous To-Do's.
 
 --snip--
+
+Wed  6 Mar 10:46:54 WET 2024
+
+**Things that I must add:**
+
+- Crontab for regular backups to the git folder;
+- an alias/command for automatically commiting and pushing updates to said folder;
+- mailserver (properly configure postfix, at a minimum, and take care of the JS script);
+- add Snort for better traffic monitoring. Figure out how it works and what you can do;
+- review security implementations;
+- add samba or some such alternative for direct connections (to be considered);
+- adapt site for mobile viewing;
+- re-organize the site structure and presentation;
+- add more content and varied content.
+
+--snip--
+
