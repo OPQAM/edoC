@@ -25,6 +25,7 @@ int main() {
 	file1 = fopen(filename1, "r");
 	if (file1 == NULL) {
 		printf("I'm sorry, but %s not a valid file.\n", filename1);
+		fclose(file1);
 		return 1;
 	}
 	
