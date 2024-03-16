@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-
+#include <string.h>
 
 int main() {
 	
@@ -15,13 +15,16 @@ int main() {
 	int c;
 
 	printf("Please select the file you'd like to copy from:\n");
-	scanf(" %s", &filename1);
+	fgets(filename1, sizeof(filename1), stdin);
+
+	// Remove the newline character if it's present
+	if (filename1[strlen(filename1) - 1] == '\n')
+		filename1[strlen(filename1) - 1] = '\0';
 
 	//Opening up the file for reading
 	file1 = fopen(filename1, "r");
-
 	if (file1 == NULL) {
-		printf("I'm sorry, but that's not a valid file.\n");
+		printf("I'm sorry, but %s not a valid file.\n", filename1);
 		return 1;
 	}
 	
@@ -31,30 +34,34 @@ int main() {
 	if (choice == 'w') {
 	
 		printf("What file do you want to write into?\n");
-		scanf(" %s", &filename2);
+		scanf(" %s", filename2);
 	
 		//Opening up the file for writing
 		file2 = fopen(filename2, "w");
 		
 		if (file2==NULL) {
-		printf("I'm sorry, but that's not a valid file.\n");
-		return 1;
+			perror("Error opening file");
+			printf("I'm sorry, but %s not a valid file.\n", filename2);
+			fclose(file1);
+			return 1;
 	}
 
 	} else if (choice == 'a') {
 		printf("What file do you want to append to?\n");
-		scanf(" %s", &filename2);
+		scanf(" %s", filename2);
 	
 		//Opening up the file for appending
-		*file2 = fopen(filename2, "a");
+		file2 = fopen(filename2, "a");
 		
 		if (file2==NULL) {
-		printf("I'm sorry, but that's not a valid file.\n");
+		printf("I'm sorry, but %s not a valid file.\n", filename2);
+		fclose(file1);
 		return 1;
 		}
 	
 	} else {
 		printf("I'm sorry, but that's not a valid choice.\n");
+		fclose(file1);
 		return 1;
 	}
 	

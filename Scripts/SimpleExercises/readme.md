@@ -12,3 +12,5 @@ when asking to read from a file that doesnt exist the program returns the correc
 
 Right now there isnt a need for a null detection on the write option for copier. If a file doesnt exist, the text will be copied from one file to the other.
 Note: copying from text A to text A clears all text.
+The Segmentation fault was the result of asking to close the file. But since there was no file... segmentation fault. It shouldn't be a segmentation fault, though... right?
+
