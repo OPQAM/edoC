@@ -14,3 +14,4 @@ Right now there isnt a need for a null detection on the write option for copier.
 Note: copying from text A to text A clears all text.
 The Segmentation fault was the result of asking to close the file. But since there was no file... segmentation fault. It shouldn't be a segmentation fault, though... right?
 
+Removed the error messages from non-existent files to write or append to. They are created if they don't exist, so this isn't needed. Could add one such error for the 'a' - stating that there is no such a file.

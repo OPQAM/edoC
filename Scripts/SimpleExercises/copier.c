@@ -38,13 +38,6 @@ int main() {
 	
 		//Opening up the file for writing
 		file2 = fopen(filename2, "w");
-		
-		if (file2==NULL) {
-			perror("Error opening file");
-			printf("I'm sorry, but %s not a valid file.\n", filename2);
-			fclose(file1);
-			return 1;
-	}
 
 	} else if (choice == 'a') {
 		printf("What file do you want to append to?\n");
@@ -52,13 +45,7 @@ int main() {
 	
 		//Opening up the file for appending
 		file2 = fopen(filename2, "a");
-		
-		if (file2==NULL) {
-		printf("I'm sorry, but %s not a valid file.\n", filename2);
-		fclose(file1);
-		return 1;
-		}
-	
+			
 	} else {
 		printf("I'm sorry, but that's not a valid choice.\n");
 		fclose(file1);
