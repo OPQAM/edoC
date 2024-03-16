@@ -11,4 +11,3 @@ Working with 'copier.c'. I'll be pushing stuff to github a lot more frequently, 
 when asking to read from a file that doesnt exist the program returns the correct error message, but it also returns Segmentation Fault
 
 Right now there isnt a need for a null detection on the write option for copier. If a file doesnt exist, the text will be copied from one file to the other.
-Note: copying from text A to text A clears all text.
