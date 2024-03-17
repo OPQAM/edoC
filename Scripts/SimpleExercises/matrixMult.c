@@ -60,8 +60,30 @@ int main() {
 			scanf("%d",&matrixB[i][j]);
 		}
 	}
+
+	//Let's see the Matrices
+	//Matrix A
+	printf("\nMatrix A:\n");
+	for (int i = 0; i < rowA; i++) {
+		printf("\n|");
+                for (int j = 0; j < columnA; j++) {
+                        printf("%d ",matrixA[i][j]);
+                }
+        }
+	//Matrix B
+	printf("\nMatrix B:\n");
+	for (int i = 0; i < rowB; i++) {    
+                printf("\n|");               
+                for (int j = 0; j < columnB; j++) {
+                        printf("%d ",matrixB[i][j]);
+                }
+        }
+
+	//Matrix multiplication
+
+
 /*
- * Consider something like:
+ * Consider something like (FOR THE MATRIX CONTROLS):
  *         printf("Entry [%d][%d]: ", i, j);
             while (scanf("%d", &matrixA[i][j]) != 1) {
                 printf("Invalid input. Please enter an integer.\n");
