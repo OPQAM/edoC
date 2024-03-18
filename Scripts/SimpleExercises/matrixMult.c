@@ -81,6 +81,13 @@ int main() {
         }
 
 	int matrixC[rowsA][columnsB];
+	//Initializing the matrix with zeros              // (2)
+	for (int i = 0; i < rowsA; i++) {
+    		for (int j = 0; j < columnsB; j++) {
+        		matrixC[i][j] = 0;
+		}
+	}	
+
 	//Matrix multiplication
 	for (int i = 0; i < rowsA; i++) {                  
                 for (int j = 0; j < columnsB; j++) {
@@ -117,4 +124,4 @@ int main() {
 //
 // (1) - This is basically checking if the user has inputed a single integer, and if that value is positive. Any other input will result in an error
 //
-// (2)
+// (2) We really don't want it to have no initial values and start doing addition on them, as we'll get trash values instead
