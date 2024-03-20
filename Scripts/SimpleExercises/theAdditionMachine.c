@@ -8,16 +8,20 @@ int main() {
 	while (true) {
 		printf("\nType Integer ('0' to do summation): ");
 		scanf("%d", &value);
-		if (value == 0) {
-			printf("\nFinal Value: %d", calculation)
+
+		if (scanf("%d", &value) != 1) {
+			printf("\nNot an Integer. Game Over.\n");
+			return 1;
 		}
-		else
-		{
-			calculation += value;
+		else {
+			if (value == 0) {
+				printf("\nFinal Value: %d", calculation);
+				return 0;
+			}
+			else
+			{
+				calculation += value;
+			}
 		}
 	}
-
-
-
-
 }
