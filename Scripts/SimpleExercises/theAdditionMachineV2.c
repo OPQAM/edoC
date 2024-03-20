@@ -50,14 +50,17 @@ int main() {
 
 //NOTES: (0) The main idea here is to be able to take in a number like 7.0 and still accept it as an integer, thus making the program a little less stupid. Another addition is to have the program not crash on a bad input. Instead, the user is asked again to input an adequate value
 //
-// (1)  
+// (1) Making sure that we have received a single double input (instead of, say, a character) 
 //
-// (2) 
+// (2) Resetting the value of 'value' to 0.0. Probably a useless move as that value is not being
+//     added without consent, AFAIK
+// (3) This is to read and discard any unused characters in the input buffer. Need to understand it better
 //
-// (3) 
+// (4) Since a fundamental variable hasn't been processed yet, this is just to protect against an initial 0
 //
-// (4) 
+// (5) Separating the factional and integral parts of the value, to make sure it's a valid int
 //
-// (5) 
+// (6) Having our double become an integer once again for final presentation
 //
-// (6) 
+//
+// WIP - it does not work!
