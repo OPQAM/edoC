@@ -13,7 +13,7 @@ int main() {
 		}
 		else {
 			if (value == 0) {
-				printf("\nFinal Value: %d", calculation);
+				printf("\nFinal Value: %d\n", calculation);
 				return 0;
 			}
 			else
