@@ -26,6 +26,10 @@ I controlled for possible bad input in a similar fashion to what was done with t
 
 To achieve this I'll nedd (as a possible solution) to take in values originally as floats, and then to check if the fractional part of the float = 0.
 
+-> Finished V2. It does everything correctly! Except addition........
+
+I think that the problem lies with the way floats and doubles are represented and how they accumulate errors and... well... actually work. I'll have to take a gander tomorrow. Unfortunately my time has been very limited.
+
 --snip--
 
 
