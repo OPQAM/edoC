@@ -29,7 +29,7 @@ int main() {
 	}
 	
 	printf("\nNumber of columns for Matrix B: ");
-	if (scanf("%d", &columnsB) != 1 || columnsB <= 0) {     // (1)
+	if (scanf("%d", &columnsB) != 1 || columnsB <= 0) {    
 		printf("\nInvalid input. Bye!\n");
 		return 1;
 	}
