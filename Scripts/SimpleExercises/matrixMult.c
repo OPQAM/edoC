@@ -49,16 +49,28 @@ int main() {
 	printf("\nLet's enter the values for matrix A.\n");
 	for (int i = 0; i < rowsA; i++) {
 		for (int j = 0; j < columnsA; j++) {
-			printf("\nEntry[%d][%d]: ",i, j);
-			scanf("%d",&matrixA[i][j]);
+			printf("Entry[%d][%d]: ", i, j);
+			while (scanf("%d", &matrixA[i][j]) != 1) {
+                		printf("Invalid input. Please enter an integer.\n");
+                		// Clear input buffer to prevent infinite loop
+                		int c;                              // (2)
+				while ((c = getchar()) != '\n' && c != EOF);
+                		printf("Entry[%d][%d]: ", i, j); // Reprompt
+			}
 		}
 	}
-	
+
+	//Matrix B	
 	printf("\nLet's enter the values for matrix B.\n");
 	for (int i = 0; i < rowsB; i++) {
 		for (int j = 0; j < columnsB; j++) {
-			printf("\nEntry[%d][%d]: ",i, j);
-			scanf("%d",&matrixB[i][j]);
+			printf("Entry[%d][%d]: ", i, j);
+			while (scanf("%d", &matrixB[i][j]) != 1) {
+                		printf("Invalid input. Please enter an integer.\n");
+                		// Clear input buffer to prevent infinite loop
+                		while (getchar() != '\n');
+                		printf("Entry[%d][%d]: ", i, j); // Reprompt
+			}
 		}
 	}
 
@@ -105,23 +117,15 @@ int main() {
                         printf("%d ",matrixC[i][j]);
                 }
         }
-        
-/*
- * Consider something like (FOR THE MATRIX CONTROLS):
- *         printf("Entry [%d][%d]: ", i, j);
-            while (scanf("%d", &matrixA[i][j]) != 1) {
-                printf("Invalid input. Please enter an integer.\n");
-                // Clear input buffer to prevent infinite loop
-                while (getchar() != '\n');
-                printf("Entry [%d][%d]: ", i, j); // Reprompt
- *
- * Or subtract from i?.... check it out
- * */
-
 }
 
-// NOTES:
+// NOTES: (0) Note that this program will accept 4.4 as being the integer 4.
 //
 // (1) - This is basically checking if the user has inputed a single integer, and if that value is positive. Any other input will result in an error
 //
-// (2) We really don't want it to have no initial values and start doing addition on them, as we'll get trash values instead
+// (2) This is done to clear tbhe input buffer, and thus preventing infinite loops
+//     The full utility of this is still lost on me
+//     I've left the Matrix B as a slightly different version without this level of
+//     control. Need to check on this logic later
+//
+// (3) We really don't want it to have no initial values and start doing addition on them, as we'll get trash values instead
