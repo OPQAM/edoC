@@ -33,9 +33,7 @@ Notice that the high-order bits keep within the same vicinity of addresses.
 
 0x (7ff) (c02bf4836)
 
-
-
-
+Note that in the video lecture, since the lecturer is running a Docker container, address space randomization cannot be disabled, therefore whenever running gdb, the addresses shown are truly randomized, unlike what I'm seeing locally on my PC, which is showing things like 0x7ffffffc996 
 
 
 
