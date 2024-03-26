@@ -20,3 +20,12 @@ int main()
 	printf("&c: %p\n", &c);
 	printf("&d: %p\n", &d);
 }
+
+//NOTES:
+//
+// So, let's look at uint_32. In this case, each variable will take 4 bytes, thus address positions:
+//
+// XXX3
+// XXX2
+// XXX1
+// XXX0    -> And this position will hold the variable content of '1' (in the case of, say our variable 'c' above)
