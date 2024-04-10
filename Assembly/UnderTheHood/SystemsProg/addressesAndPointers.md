@@ -34,27 +34,3 @@ We can print memory addresses with printf by using the %p format specifier. 'p' 
 Note that if a variable points to 0x7fffd545bd17 that, basically 140,736,771,505,430. A huge number, ofc.
 
 As we know (again, check the .c files) variables can span multiple addresses in memory, if they are larger than 1-byte in memory.
-
---snip--
-
-Running 'addressesAndPointers' with a value of 5, returns:
-We're starting from a higher memory position, every time, and goin down - by 32 (node that we're reading in hexadecimal), as showcased below (check the program's code to see why it's printing this):
-
-x: 5 - &x: 0x7ffc9d7b01d8
-x: 4 - &x: 0x7ffc9d7b01b8
-x: 3 - &x: 0x7ffc9d7b0198
-x: 2 - &x: 0x7ffc9d7b0178
-x: 1 - &x: 0x7ffc9d7b0158
-sum(5): 15
-
---snip--
-
-Pointers are Addresses to Memory
-
--> In systems programming languages, pointers are a first-class data type.
-
-They can be stored in variables, passed as parameters, returned from functions;
-We can dereference a pointer to read that memory address's contents
-
-WIP
-

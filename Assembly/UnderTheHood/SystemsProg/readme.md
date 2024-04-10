@@ -24,10 +24,4 @@ The printed line was 'What even is life?'
 
 Added the folders from the SystemsProg course to the Lectures folder, and added it to .gitignore
 
---snip--
 
-Tue  9 Apr 11:37:56 WEST 2024
-
-Currently working on 'addressesAndPointers.c' -> following along sysprogramming video course
-
---snip--
