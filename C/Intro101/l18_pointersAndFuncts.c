@@ -9,7 +9,7 @@ int main(void){
 	return 0;
 }
 
-void adOne(int* a){
+void addOne(int* a){
 	*a = *a + 1; // The function gets the value from the address, adds one, and stores it back at that variable address
 }
 
