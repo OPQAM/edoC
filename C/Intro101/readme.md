@@ -10,3 +10,7 @@ Added 10 .c files and their compiled programs
 Next: loops
 
 --snip--
+
+://www.youtube.com/watch?v=ojx2QYRr_Lo&list=PL2EF13wm-hWDrusotYxZwCSDACnWQRYP3&index=13
+
+
