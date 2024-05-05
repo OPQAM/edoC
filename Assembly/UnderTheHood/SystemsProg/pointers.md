@@ -43,3 +43,14 @@ char *a_char_ptr = &my_char;
 -> **In C, we can change the value of a local variable by manipulating a pointer to that local variable's memory address(!)**
 
 Take a look at pointer01.c to see a function (add1) actually changing a variable that is local to main().
+
+**Remember:**
+
+Local variables are on our call stack.
+After a frame is returned, we have no guarantee that its memory will still be there.
+So, we should treat any memory that was local to a function call, and in that frame, as invalid as soon as that function returns.
+Otherwise, accessing this access might result in accessing invalid memory.
+
+**snip**
+
+
