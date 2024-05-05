@@ -29,3 +29,17 @@ They dinamically dispatch functions;
 ...
 
 --snip--
+
+**Pointer Declaration**
+
+char *a_char_ptr = &my_char;
+ |   |     |          |
+3rd  2nd  1st        4th
+
+"My variable (a_char_ptr) is a pointer (*) to a character (char), and this is it (my_char)."
+
+-> Remember that a pointer is pointing towards the memory location of the variable.
+
+-> **In C, we can change the value of a local variable by manipulating a pointer to that local variable's memory address(!)**
+
+Take a look at pointer01.c to see a function (add1) actually changing a variable that is local to main().
