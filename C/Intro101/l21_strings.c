@@ -1,19 +1,17 @@
 #include <stdio.h>
+#include <string.h>        // library of strings
+int main(void) {
+	char c[] = "Hello World!";
 
-// In C, a string is just a pointer to a set of characters, much like a list in C is just a pointer to the start of that list.
+	char *d = "Hello, Mike!";
 
-int main() {
-	//char c = 'a';
-	//printf("The character: %c\n", c);
-	//printf("The ASCII number of 'a': %d\n", c);
-	
-	// So, let's do a loop and check the ASCII table. Why not?
-	printf("\nASCII TABLE\n\n");
-	for (int i = 33; i < 127; i++) {
-	printf("Number: %d | Character: %c\n", i, i);
-	}
-	
+	printf("%c\n", *d);            // first element
+	printf("%c\n", *(d+1));        // next element.. etc
+	printf("%ld\n", strlen(c));    //
 	
 	return 0;
+
+
+	// NOTE: The very last item on a string is a null terminator (\0) -> It's 
 
 }
