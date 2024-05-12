@@ -1,4 +1,4 @@
-include <stdio.h>
+#include <stdio.h>
 
 // We can create our own data types using typedef. Here's an example:
 
