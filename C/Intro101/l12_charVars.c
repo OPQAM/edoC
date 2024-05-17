@@ -29,6 +29,14 @@ int main(void){
 	printf("a - 32 = A: %c\n", 'a' - 32);
 
 
+	// So, let's do a loop and check the ASCII table. Why not?
+	printf("\nASCII TABLE\n\n");
+	for (int i = 33; i < 127; i++) {
+	printf("Number: %d | Character: %c\n", i, i);
+	}
+
+	// So we can actually add these values, subtract them, etc.
+	// As I've mentioned elsewhere, we can also substitute lowercase with uppercase, and vice versa. Any uppercase letter + 32 = lowercase letter.
 
 
 
