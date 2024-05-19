@@ -1,0 +1,40 @@
+#include <stdio.h>
+
+int main() {
+    int a;
+    char b;
+    float c;
+    double d;
+    int arr[10];
+
+	printf("");
+	printf("ZU");
+    printf("Size of int(zu): %zu bytes\n", sizeof(int));
+    printf("Size of a (int variable)(zu): %zu bytes\n", sizeof(a));
+    printf("Size of char(zu): %zu bytes\n", sizeof(char));
+    printf("Size of b (char variable)(zu): %zu bytes\n", sizeof(b));
+    printf("Size of float(zu): %zu bytes\n", sizeof(float));
+    printf("Size of c (float variable)(zu): %zu bytes\n", sizeof(c));
+    printf("Size of double(zu): %zu bytes\n", sizeof(double));
+    printf("Size of d (double variable)(zu): %zu bytes\n", sizeof(d));
+    printf("Size of arr (array of 10 int elements)(zu): %zu bytes\n", sizeof(arr));
+    printf("Number of elements in arr(zu): %zu\n", sizeof(arr) / sizeof(arr[0]));
+	printf("");
+	printf("LU");
+    printf("Size of int(lu): %lu bytes\n", sizeof(int));
+    printf("Size of a (int variable)(lu): %lu bytes\n", sizeof(a));
+    printf("Size of char(lu): %lu bytes\n", sizeof(char));
+    printf("Size of b (char variable)(lu): %lu bytes\n", sizeof(b));
+    printf("Size of float(lu): %lu bytes\n", sizeof(float));
+    printf("Size of c (float variable)(lu): %lu bytes\n", sizeof(c));
+    printf("Size of double(lu): %lu bytes\n", sizeof(double));
+    printf("Size of d (double variable)(lu): %lu bytes\n", sizeof(d));
+    printf("Size of arr (array of 10 int elements)(lu): %lu bytes\n", sizeof(arr));
+    printf("Number of elements in arr(lu): %lu\n", sizeof(arr) / sizeof(arr[0]));
+    
+	return 0;
+}
+
+// Note %zu is used for size_t values and %lu is used for unsigned long values.
+//
+//
