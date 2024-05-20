@@ -4,7 +4,7 @@
 
 - Are a notation to allocate a contiguous span of memory whose size is # elements * byte width of type of each element.
 
-For example, char[10] is 10 bytes and int16_t[10] is 20 bytes. Remember that int16_t is actually 16 bits, which is 2 bytes, of course.
+For example, char[10] is 10 bytes and int16\_t[10] is 20 bytes. Remember that int16\_t is actually 16 bits, which is 2 bytes, of course.
 
 The sizeof(array) operator returns array's total size in byte.
 
@@ -56,14 +56,28 @@ The sizeof(array) operator returns array's total size in byte.
 -> Note that that sizeof isn't a function, it's an _operator_, just like the '+' symbol or the '&&'.
 -> This allows to do things that a function couldn't, like getting type name as a valid operand (ex: sizeof(int))
 
-- Note that size_t's width in memory is machine dependent, just like pointers (same width)
+- Note that size\_t's width in memory is machine dependent, just like pointers (same width)
 
 (see sizeOfTests.c)
 
 -> Common technique to compute the 'length' of an array of type T:
 
-T an _array[] = { ... };                                // Uncommiting the actual size of the array
-size_t length = sizeof(an_array) / sizeof(T);           // Size of array divided by the size of a specific element in the array
+T an \_array[] = { ... };                                // Uncommiting the actual size of the array
+size\_t length = sizeof(an\_array) / sizeof(T);           // Size of array divided by the size of a specific element in the array
 
 ####Array Iteration with Pointers
+
+- It's common to use a pointer into an array as a cursor to iterate through elements
+
+- With strings there's a sentinel value (ending mark) in the null termination character '\0'
+
+- Otherwise we need to know how many times to iterate
+(see arrayWithPointers.c)
+
+
+
+
+
+
+
 
