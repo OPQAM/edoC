@@ -1,7 +1,7 @@
 #include "node.h"
-#include "stdef.h"
-#include "stdio.h"
-
+#include <stdef.h>
+#include <stdio.h>
+#include <stdlib.h>
 
 struct stack{
 	struct node *top;                    // (1)
