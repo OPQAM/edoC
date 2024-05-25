@@ -20,8 +20,11 @@
 //    --- 
 //
 
-// We'll be using 3 files:
+// We'll be using 3 files, generally:
 //
-// -> node, which has a value and pointer to another node
-// -> header file 
-// -> C file for the stack - the implementation
+// - node.h      -> which has a value and pointer to another node
+// - stack.h     -> header file 
+// - stack.c     -> C file for the stack - the implementation
+//
+// The header file will define the stack and all the functions that our stack will have
+//
