@@ -1,0 +1,415 @@
+SS(8)                                                                         System Manager's Manual                                                                        SS(8)
+
+NNAAMMEE
+       ss - another utility to investigate sockets
+
+SSYYNNOOPPSSIISS
+       ssss [_o_p_t_i_o_n_s] _[ _F_I_L_T_E_R _]
+
+DDEESSCCRRIIPPTTIIOONN
+       ssss is used to dump socket statistics. It allows showing information similar to _n_e_t_s_t_a_t.  It can display more TCP and state information than other tools.
+
+OOPPTTIIOONNSS
+       When no option is used ss displays a list of open non-listening sockets (e.g. TCP/UNIX/UDP) that have established connection.
+
+       --hh,, ----hheellpp
+              Show summary of options.
+
+       --VV,, ----vveerrssiioonn
+              Output version information.
+
+       --HH,, ----nnoo--hheeaaddeerr
+              Suppress header line.
+
+       --OO,, ----oonneelliinnee
+              Print each socket's data on a single line.
+
+       --nn,, ----nnuummeerriicc
+              Do not try to resolve service names. Show exact bandwidth values, instead of human-readable.
+
+       --rr,, ----rreessoollvvee
+              Try to resolve numeric address/ports.
+
+       --aa,, ----aallll
+              Display both listening and non-listening (for TCP this means established connections) sockets.
+
+       --ll,, ----lliisstteenniinngg
+              Display only listening sockets (these are omitted by default).
+
+       --oo,, ----ooppttiioonnss
+              Show timer information. For TCP protocol, the output format is:
+
+              timer:(<timer_name>,<expire_time>,<retrans>)
+
+              <<ttiimmeerr__nnaammee>>
+                     the name of the timer, there are five kind of timer names:
+
+                     oonn : means one of these timers: TCP retrans timer, TCP early retrans timer and tail loss probe timer
+
+                     kkeeeeppaalliivvee: tcp keep alive timer
+
+                     ttiimmeewwaaiitt: timewait stage timer
+
+                     ppeerrssiisstt: zero window probe timer
+
+                     uunnkknnoowwnn: none of the above timers
+
+              <<eexxppiirree__ttiimmee>>
+                     how long time the timer will expire
+
+              <<rreettrraannss>>
+                     how many times the retransmission occurred
+
+       --ee,, ----eexxtteennddeedd
+              Show detailed socket information. The output format is:
+
+              uid:<uid_number> ino:<inode_number> sk:<cookie>
+
+              <<uuiidd__nnuummbbeerr>>
+                     the user id the socket belongs to
+
+              <<iinnooddee__nnuummbbeerr>>
+                     the socket's inode number in VFS
+
+              <<ccooookkiiee>>
+                     an uuid of the socket
+
+       --mm,, ----mmeemmoorryy
+              Show socket memory usage. The output format is:
+
+              skmem:(r<rmem_alloc>,rb<rcv_buf>,t<wmem_alloc>,tb<snd_buf>,
+                            f<fwd_alloc>,w<wmem_queued>,o<opt_mem>,
+                            bl<back_log>,d<sock_drop>)
+
+              <<rrmmeemm__aalllloocc>>
+                     the memory allocated for receiving packet
+
+              <<rrccvv__bbuuff>>
+                     the total memory can be allocated for receiving packet
+
+              <<wwmmeemm__aalllloocc>>
+                     the memory used for sending packet (which has been sent to layer 3)
+
+              <<ssnndd__bbuuff>>
+                     the total memory can be allocated for sending packet
+
+              <<ffwwdd__aalllloocc>>
+                     the  memory  allocated by the socket as cache, but not used for receiving/sending packet yet. If need memory to send/receive packet, the memory in this cache
+                     will be used before allocate additional memory.
+
+              <<wwmmeemm__qquueeuueedd>>
+                     The memory allocated for sending packet (which has not been sent to layer 3)
+
+              <<rroopptt__mmeemm>>
+                     The memory used for storing socket option, e.g., the key for TCP MD5 signature
+
+              <<bbaacckk__lloogg>>
+                     The memory used for the sk backlog queue. On a process context, if the process is receiving packet, and a new packet is received, it will be put into the  sk
+                     backlog queue, so it can be received by the process immediately
+
+              <<ssoocckk__ddrroopp>>
+                     the number of packets dropped before they are de-multiplexed into the socket
+
+       --pp,, ----pprroocceesssseess
+              Show process using socket.
+
+       --ii,, ----iinnffoo
+              Show internal TCP information. Below fields may appear:
+
+              ttss     show string "ts" if the timestamp option is set
+
+              ssaacckk   show string "sack" if the sack option is set
+
+              eeccnn    show string "ecn" if the explicit congestion notification option is set
+
+              eeccnnsseeeenn
+                     show string "ecnseen" if the saw ecn flag is found in received packets
+
+              ffaassttooppeenn
+                     show string "fastopen" if the fastopen option is set
+
+              ccoonngg__aallgg
+                     the congestion algorithm name, the default congestion algorithm is "cubic"
+
+              wwssccaallee::<<ssnndd__wwssccaallee>>::<<rrccvv__wwssccaallee>>
+                     if window scale option is used, this field shows the send scale factor and receive scale factor
+
+              rrttoo::<<iiccsskk__rrttoo>>
+                     tcp re-transmission timeout value, the unit is millisecond
+
+              bbaacckkooffff::<<iiccsskk__bbaacckkooffff>>
+                     used for exponential backoff re-transmission, the actual re-transmission timeout value is icsk_rto << icsk_backoff
+
+              rrtttt::<<rrtttt>>//<<rrttttvvaarr>>
+                     rtt is the average round trip time, rttvar is the mean deviation of rtt, their units are millisecond
+
+              aattoo::<<aattoo>>
+                     ack timeout, unit is millisecond, used for delay ack mode
+
+              mmssss::<<mmssss>>
+                     max segment size
+
+              ccwwnndd::<<ccwwnndd>>
+                     congestion window size
+
+              ppmmttuu::<<ppmmttuu>>
+                     path MTU value
+
+              sssstthhrreesshh::<<sssstthhrreesshh>>
+                     tcp congestion window slow start threshold
+
+              bbyytteess__aacckkeedd::<<bbyytteess__aacckkeedd>>
+                     bytes acked
+
+              bbyytteess__rreecceeiivveedd::<<bbyytteess__rreecceeiivveedd>>
+                     bytes received
+
+              sseeggss__oouutt::<<sseeggss__oouutt>>
+                     segments sent out
+
+              sseeggss__iinn::<<sseeggss__iinn>>
+                     segments received
+
+              sseenndd <<sseenndd__bbppss>>bbppss
+                     egress bps
+
+              llaassttssnndd::<<llaassttssnndd>>
+                     how long time since the last packet sent, the unit is millisecond
+
+              llaassttrrccvv::<<llaassttrrccvv>>
+                     how long time since the last packet received, the unit is millisecond
+
+              llaassttaacckk::<<llaassttaacckk>>
+                     how long time since the last ack received, the unit is millisecond
+
+              ppaacciinngg__rraattee <<ppaacciinngg__rraattee>>bbppss//<<mmaaxx__ppaacciinngg__rraattee>>bbppss
+                     the pacing rate and max pacing rate
+
+              rrccvv__ssppaaccee::<<rrccvv__ssppaaccee>>
+                     a helper variable for TCP internal auto tuning socket receive buffer
+
+              ttccpp--uullpp--mmppttccpp ffllaaggss::[[MMmmBBbbJJjjeeccvv]] ttookkeenn::<<rreemm__ttookkeenn((rreemm__iidd))//lloocc__ttookkeenn((lloocc__iidd))>> sseeqq::<<ssnn>> ssffsseeqq::<<ssssnn>> ssssnnooffff::<<ooffff>> mmaapplleenn::<<mmaapplleenn>>
+                     MPTCP subflow information
+
+       ----ttooss  Show ToS and priority information. Below fields may appear:
+
+              ttooss    IPv4 Type-of-Service byte
+
+              ttccllaassss IPv6 Traffic Class byte
+
+              ccllaassss__iidd
+                     Class id set by net_cls cgroup. If class is zero this shows priority set by SO_PRIORITY.
+
+       ----ccggrroouupp
+              Show cgroup information. Below fields may appear:
+
+              ccggrroouupp Cgroup v2 pathname. This pathname is relative to the mount point of the hierarchy.
+
+       --KK,, ----kkiillll
+              Attempts  to  forcibly close sockets. This option displays sockets that are successfully closed and silently skips sockets that the kernel does not support closing.
+              It supports IPv4 and IPv6 sockets only.
+
+       --ss,, ----ssuummmmaarryy
+              Print summary statistics. This option does not parse socket lists obtaining summary from various sources. It is useful when amount of sockets is so huge that  pars‐
+              ing /proc/net/tcp is painful.
+
+       --EE,, ----eevveennttss
+              Continually display sockets as they are destroyed
+
+       --ZZ,, ----ccoonntteexxtt
+              As the --pp option but also shows process security context.
+
+              For nneettlliinnkk(7) sockets the initiating process context is displayed as follows:
+
+                     1.  If valid pid show the process context.
+
+                     2.  If destination is kernel (pid = 0) show kernel initial context.
+
+                     3.  If  a  unique identifier has been allocated by the kernel or netlink user, show context as "unavailable". This will generally indicate that a process has
+                         more than one netlink socket active.
+
+       --zz,, ----ccoonntteexxttss
+              As the --ZZ option but also shows the socket context. The socket context is taken from the associated inode and is not the actual socket context held by  the  kernel.
+              Sockets  are  typically labeled with the context of the creating process, however the context shown will reflect any policy role, type and/or range transition rules
+              applied, and is therefore a useful reference.
+
+       --NN NNSSNNAAMMEE,, ----nneett==NNSSNNAAMMEE
+              Switch to the specified network namespace name.
+
+       --bb,, ----bbppff
+              Show socket classic BPF filters (only administrators are allowed to get these information).
+
+       --44,, ----iippvv44
+              Display only IP version 4 sockets (alias for -f inet).
+
+       --66,, ----iippvv66
+              Display only IP version 6 sockets (alias for -f inet6).
+
+       --00,, ----ppaacckkeett
+              Display PACKET sockets (alias for -f link).
+
+       --tt,, ----ttccpp
+              Display TCP sockets.
+
+       --uu,, ----uuddpp
+              Display UDP sockets.
+
+       --dd,, ----ddccccpp
+              Display DCCP sockets.
+
+       --ww,, ----rraaww
+              Display RAW sockets.
+
+       --xx,, ----uunniixx
+              Display Unix domain sockets (alias for -f unix).
+
+       --SS,, ----ssccttpp
+              Display SCTP sockets.
+
+       ----vvssoocckk
+              Display vsock sockets (alias for -f vsock).
+
+       ----xxddpp  Display XDP sockets (alias for -f xdp).
+
+       ----iinneett--ssoocckkoopptt
+              Display inet socket options.
+
+       --ff FFAAMMIILLYY,, ----ffaammiillyy==FFAAMMIILLYY
+              Display sockets of type FAMILY.  Currently the following families are supported: unix, inet, inet6, link, netlink, vsock, xdp.
+
+       --AA QQUUEERRYY,, ----qquueerryy==QQUUEERRYY,, ----ssoocckkeett==QQUUEERRYY
+              List of socket tables to dump, separated by commas. The following identifiers are  understood:  all,  inet,  tcp,  udp,  raw,  unix,  packet,  netlink,  unix_dgram,
+              unix_stream,  unix_seqpacket, packet_raw, packet_dgram, dccp, sctp, vsock_stream, vsock_dgram, xdp Any item in the list may optionally be prefixed by an exclamation
+              mark (!!)  to exclude that socket table from being dumped.
+
+       --DD FFIILLEE,, ----ddiiaagg==FFIILLEE
+              Do not display anything, just dump raw information about TCP sockets to FILE after applying filters. If FILE is - stdout is used.
+
+       --FF FFIILLEE,, ----ffiilltteerr==FFIILLEE
+              Read filter information from FILE.  Each line of FILE is interpreted like single command line option. If FILE is - stdin is used.
+
+       FFIILLTTEERR ::== [[ ssttaattee SSTTAATTEE--FFIILLTTEERR ]] [[ EEXXPPRREESSSSIIOONN ]]
+              Please take a look at the official documentation for details regarding filters.
+
+SSTTAATTEE--FFIILLTTEERR
+       SSTTAATTEE--FFIILLTTEERR allows to construct arbitrary set of states to match. Its syntax is sequence of keywords state and exclude followed by identifier of state.
+
+       Available identifiers are:
+
+              All standard TCP states: eessttaabblliisshheedd, ssyynn--sseenntt, ssyynn--rreeccvv, ffiinn--wwaaiitt--11, ffiinn--wwaaiitt--22, ttiimmee--wwaaiitt, cclloosseedd, cclloossee--wwaaiitt, llaasstt--aacckk, lliisstteenniinngg and cclloossiinngg..
+
+              aallll - for all the states
+
+              ccoonnnneecctteedd - all the states except for lliisstteenniinngg and cclloosseedd
+
+              ssyynncchhrroonniizzeedd - all the ccoonnnneecctteedd states except for ssyynn--sseenntt
+
+              bbuucckkeett - states, which are maintained as minisockets, i.e.  ttiimmee--wwaaiitt and ssyynn--rreeccvv
+
+              bbiigg - opposite to bbuucckkeett
+
+EEXXPPRREESSSSIIOONN
+       EEXXPPRREESSSSIIOONN allows filtering based on specific criteria.  EEXXPPRREESSSSIIOONN consists of a series of predicates combined by boolean operators. The possible operators in  increasing
+       order  of  precedence  are oorr (or | or ||), aanndd (or & or &&), and nnoott (or !). If no operator is between consecutive predicates, an implicit aanndd operator is assumed. Subex‐
+       pressions can be grouped with "(" and ")".
+
+       The following predicates are supported:
+
+       {{ddsstt||ssrrcc}} [[==]] HHOOSSTT
+              Test if the destination or source matches HOST. See HOST SYNTAX for details.
+
+       {{ddppoorrtt||ssppoorrtt}} [[OOPP]] [[FFAAMMIILLYY::]]::PPOORRTT
+              Compare the destination or source port to PORT. OP can be any of "<", "<=", "=", "!=", ">=" and ">". Following normal arithmetic rules. FAMILY and PORT are  as  de‐
+              scribed in HOST SYNTAX below.
+
+       ddeevv [[==||!!==]] DDEEVVIICCEE
+              Match based on the device the connection uses. DEVICE can either be a device name or the index of the interface.
+
+       ffwwmmaarrkk [[==||!!==]] MMAASSKK
+              Matches  based on the fwmark value for the connection. This can either be a specific mark value or a mark value followed by a "/" and a bitmask of which bits to use
+              in the comparison. For example "fwmark = 0x01/0x03" would match if the two least significant bits of the fwmark were 0x01.
+
+       ccggrroouupp [[==||!!==]] PPAATTHH
+              Match if the connection is part of a cgroup at the given path.
+
+       aauuttoobboouunndd
+              Match if the port or path of the source address was automatically allocated (rather than explicitly specified).
+
+       Most operators have aliases. If no operator is supplied "=" is assumed.  Each of the following groups of operators are all equivalent:
+
+              • = == eq
+
+              • != ne neq
+
+              • > gt
+
+              • < lt
+
+              • >= ge geq
+
+              • <= le leq
+
+              • ! not
+
+              • | || or
+
+              • & && and
+
+HHOOSSTT SSYYNNTTAAXX
+       The general host syntax is [FAMILY:]ADDRESS[:PORT].
+
+       FAMILY must be one of the families supported by the -f option. If not given it defaults to the family given with the -f option, and if that is also  missing,  will  assume
+       either  inet  or  inet6.  Note that all host conditions in the expression should either all be the same family or be only inet and inet6. If there is some other mixture of
+       families, the results will probably be unexpected.
+
+       The form of ADDRESS and PORT depends on the family used. "*" can be used as a wildcard for either the address or port. The details for each family are as follows:
+
+       uunniixx   ADDRESS is a glob pattern (see ffnnmmaattcchh(3)) that will be matched case-insensitively against the unix socket's address. Both path and abstract  names  are  supported.
+              Unix addresses do not support a port, and "*" cannot be used as a wildcard.
+
+       lliinnkk   ADDRESS  is  the  case-insensitive name of an Ethernet protocol to match. PORT is either a device name or a device index for the desired link device, as seen in the
+              output of ip link.
+
+       nneettlliinnkk
+              ADDRESS is a descriptor of the netlink family. Possible values come from /etc/iproute2/nl_protos. PORT is the port id of the socket, which is usually  the  same  as
+              the owning process id. The value "kernel" can be used to represent the kernel (port id of 0).
+
+       vvssoocckk  ADDRESS is an integer representing the CID address, and PORT is the port.
+
+       iinneett and iinneett66
+              ADDRESS is an ip address (either v4 or v6 depending on the family) or a DNS hostname that resolves to an ip address of the required version. An ipv6 address must be
+              enclosed in "[" and "]" to disambiguate the port separator. The address may additionally have a prefix length given in CIDR notation (a slash followed by the prefix
+              length in bits). PORT is either the numerical socket port, or the service name for the port to match.
+
+UUSSAAGGEE EEXXAAMMPPLLEESS
+       ssss --tt --aa
+              Display all TCP sockets.
+
+       ssss --tt --aa --ZZ
+              Display all TCP sockets with process SELinux security contexts.
+
+       ssss --uu --aa
+              Display all UDP sockets.
+
+       ssss --oo ssttaattee eessttaabblliisshheedd ''(( ddppoorrtt == ::sssshh oorr ssppoorrtt == ::sssshh ))''
+              Display all established ssh connections.
+
+       ssss --xx ssrrcc //ttmmpp//..XX1111--uunniixx//**
+              Find all local processes connected to X server.
+
+       ssss --oo ssttaattee ffiinn--wwaaiitt--11 ''(( ssppoorrtt == ::hhttttpp oorr ssppoorrtt == ::hhttttppss ))'' ddsstt 119933..223333..77//2244
+              List all the tcp sockets in state FIN-WAIT-1 for our apache to network 193.233.7/24 and look at their timers.
+
+       ssss --aa --AA ''aallll,,!!ttccpp''
+              List sockets in all states from all socket tables but TCP.
+
+SSEEEE AALLSSOO
+       iipp(8),
+       RRFFCC 793 - https://tools.ietf.org/rfc/rfc793.txt (TCP states)
+
+AAUUTTHHOORR
+       _s_s was written by Alexey Kuznetsov, <kuznet@ms2.inr.ac.ru>.
+
+       This manual page was written by Michael Prokop <mika@grml.org> for the Debian project (but may be used by others).
+
+                                                                                                                                                                             SS(8)
