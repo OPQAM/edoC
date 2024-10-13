@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeLite_Workspace Name="CPointers" Database="" Version="10.0.0">
+  <Project Name="PointerBasics" Path="PointerBasics/PointerBasics.project" Active="No"/>
+  <Project Name="StringsAndPointers" Path="StringsAndPointers/StringsAndPointers.project" Active="No"/>
+  <Project Name="ArraysAndAddresses" Path="ArraysAndAddresses/ArraysAndAddresses.project" Active="No"/>
+  <Project Name="MultipleIndirection" Path="MultipleIndirection/MultipleIndirection.project" Active="No"/>
+  <Project Name="MultipleIndirectionStrings" Path="MultipleIndirectionStrings/MultipleIndirectionStrings.project" Active="No"/>
+  <Project Name="GenericPointers" Path="GenericPointers/GenericPointers.project" Active="No"/>
+  <Project Name="CommandlineArgs" Path="CommandlineArgs/CommandlineArgs.project" Active="No"/>
+  <Project Name="Malloc" Path="Malloc/Malloc.project" Active="Yes"/>
+  <Project Name="Realloc" Path="Realloc/Realloc.project" Active="No"/>
+  <Project Name="Calloc" Path="Calloc/Calloc.project" Active="No"/>
+  <Project Name="ReturnStrings" Path="ReturnStrings/ReturnStrings.project" Active="No"/>
+  <Project Name="AddressArithmetic1" Path="AddressArithmetic1/AddressArithmetic1.project" Active="No"/>
+  <Project Name="AddressArithmetic2" Path="AddressArithmetic2/AddressArithmetic2.project" Active="No"/>
+  <Project Name="AddressArithmetic3" Path="AddressArithmetic3/AddressArithmetic3.project" Active="No"/>
+  <Project Name="SingleLinkedList" Path="SingleLinkedList/SingleLinkedList.project" Active="No"/>
+  <Project Name="DoublyLinkedList" Path="DoubleLinkedList1/DoubleLinkedList1.project" Active="No"/>
+  <Project Name="Stack" Path="Stack/Stack.project" Active="No"/>
+  <Project Name="Queue" Path="Queue/Queue.project" Active="No"/>
+  <Project Name="QueueLength" Path="QueueLength/QueueLength.project" Active="No"/>
+  <Project Name="ListTransfer" Path="ListTransfer/ListTransfer.project" Active="No"/>
+  <Project Name="RemoveAt" Path="RemoveAt/RemoveAt.project" Active="No"/>
+  <Project Name="AddAfter" Path="AddAfter/AddAfter.project" Active="No"/>
+  <Project Name="SimpleFunctionPointer" Path="SimpleFunctionPointer/SimpleFunctionPointer.project" Active="No"/>
+  <Project Name="FunctionPointerArray" Path="FunctionPointerArray/FunctionPointerArray.project" Active="No"/>
+  <Project Name="DeepShallowCopy" Path="DeepShallowCopy/DeepShallowCopy.project" Active="No"/>
+  <Project Name="CommonProblems" Path="CommonProblems/CommonProblems.project" Active="No"/>
+  <BuildMatrix>
+    <WorkspaceConfiguration Name="Debug" Selected="yes">
+      <Environment/>
+      <Project Name="PointerBasics" ConfigName="Debug"/>
+      <Project Name="StringsAndPointers" ConfigName="Debug"/>
+      <Project Name="ArraysAndAddresses" ConfigName="Debug"/>
+      <Project Name="MultipleIndirection" ConfigName="Debug"/>
+      <Project Name="MultipleIndirectionStrings" ConfigName="Debug"/>
+      <Project Name="GenericPointers" ConfigName="Debug"/>
+      <Project Name="CommandlineArgs" ConfigName="Debug"/>
+      <Project Name="Malloc" ConfigName="Debug"/>
+      <Project Name="Realloc" ConfigName="Debug"/>
+      <Project Name="Calloc" ConfigName="Debug"/>
+      <Project Name="ReturnStrings" ConfigName="Debug"/>
+      <Project Name="AddressArithmetic1" ConfigName="Debug"/>
+      <Project Name="AddressArithmetic2" ConfigName="Debug"/>
+      <Project Name="AddressArithmetic3" ConfigName="Debug"/>
+      <Project Name="SingleLinkedList" ConfigName="Debug"/>
+      <Project Name="DoublyLinkedList" ConfigName="Debug"/>
+      <Project Name="Stack" ConfigName="Debug"/>
+      <Project Name="Queue" ConfigName="Debug"/>
+      <Project Name="QueueLength" ConfigName="Debug"/>
+      <Project Name="ListTransfer" ConfigName="Debug"/>
+      <Project Name="RemoveAt" ConfigName="Debug"/>
+      <Project Name="AddAfter" ConfigName="Debug"/>
+      <Project Name="SimpleFunctionPointer" ConfigName="Debug"/>
+      <Project Name="FunctionPointerArray" ConfigName="Debug"/>
+      <Project Name="DeepShallowCopy" ConfigName="Debug"/>
+      <Project Name="CommonProblems" ConfigName="Debug"/>
+    </WorkspaceConfiguration>
+    <WorkspaceConfiguration Name="Release" Selected="yes">
+      <Environment/>
+      <Project Name="PointerBasics" ConfigName="Release"/>
+      <Project Name="StringsAndPointers" ConfigName="Release"/>
+      <Project Name="ArraysAndAddresses" ConfigName="Release"/>
+      <Project Name="MultipleIndirection" ConfigName="Release"/>
+      <Project Name="MultipleIndirectionStrings" ConfigName="Release"/>
+      <Project Name="GenericPointers" ConfigName="Release"/>
+      <Project Name="CommandlineArgs" ConfigName="Release"/>
+      <Project Name="Malloc" ConfigName="Release"/>
+      <Project Name="Realloc" ConfigName="Release"/>
+      <Project Name="Calloc" ConfigName="Release"/>
+      <Project Name="ReturnStrings" ConfigName="Release"/>
+      <Project Name="AddressArithmetic1" ConfigName="Release"/>
+      <Project Name="AddressArithmetic2" ConfigName="Release"/>
+      <Project Name="AddressArithmetic3" ConfigName="Release"/>
+      <Project Name="SingleLinkedList" ConfigName="Release"/>
+      <Project Name="DoublyLinkedList" ConfigName="Release"/>
+      <Project Name="Stack" ConfigName="Release"/>
+      <Project Name="Queue" ConfigName="Release"/>
+      <Project Name="QueueLength" ConfigName="Release"/>
+      <Project Name="ListTransfer" ConfigName="Release"/>
+      <Project Name="RemoveAt" ConfigName="Release"/>
+      <Project Name="AddAfter" ConfigName="Release"/>
+      <Project Name="SimpleFunctionPointer" ConfigName="Release"/>
+      <Project Name="FunctionPointerArray" ConfigName="Release"/>
+      <Project Name="DeepShallowCopy" ConfigName="Release"/>
+      <Project Name="CommonProblems" ConfigName="Release"/>
+    </WorkspaceConfiguration>
+  </BuildMatrix>
+</CodeLite_Workspace>
