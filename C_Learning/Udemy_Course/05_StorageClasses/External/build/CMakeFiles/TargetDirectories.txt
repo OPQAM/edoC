@@ -1,3 +1,0 @@
-/home/ricardo/NOTES/PROJECTS/C_Learning/05_StorageClasses/build/CMakeFiles/foo.dir
-/home/ricardo/NOTES/PROJECTS/C_Learning/05_StorageClasses/build/CMakeFiles/edit_cache.dir
-/home/ricardo/NOTES/PROJECTS/C_Learning/05_StorageClasses/build/CMakeFiles/rebuild_cache.dir
