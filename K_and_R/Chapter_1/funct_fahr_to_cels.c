@@ -1,10 +1,8 @@
 #include <stdio.h>
 
 float celsiator(float fahr);
-
 int main(void)
 {
-    /* SCANF() */
 
     int fahr;
     
