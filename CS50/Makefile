@@ -9,10 +9,13 @@ ASMFLAGS = -S -masm=intel -O0
 # ASM (with debug info)
 ASMFLAGS_DEB = -S -masm=intel -fverbose-asm -O0
 
+# CS50 library (#include <cs50.h>)
+LDLIBS = -lcs50
 
-# Respective commands
+
+# make commands
 %: %.c
-	$(CC) $(CFLAGS) $< -o $@
+	$(CC) $(CFLAGS) $< -o $@ $(LDLIBS)
 
 %.s: %.c
 	$(CC) $(ASMFLAGS) $< -o $@
