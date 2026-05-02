@@ -18,6 +18,4 @@ man 3 malloc
 
 ---
 
-**Current Video timestamp:**
-
-3:27:14
+The file timestamp keeps track of current video position
