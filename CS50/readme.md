@@ -19,3 +19,19 @@ man 3 malloc
 ---
 
 The file timestamp keeps track of current video position
+
+---
+
+For debugging purposes, I've installed cgdb, which works fine.
+
+Common commands, as per usual:
+b main
+n
+s
+print <variable>
+info locals
+info args
+info display
+
+---
+
